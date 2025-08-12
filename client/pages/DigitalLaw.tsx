@@ -113,9 +113,9 @@ export default function DigitalLaw() {
     },
     {
       value: "150 triệu",
-      label: "Mức phạt tối đa tổ chức",
+      label: "Mức phạt tối đa tổ ch���c",
       color: "from-orange-500 to-orange-600",
-      description: "VNĐ tại Vi���t Nam",
+      description: "VNĐ tại Việt Nam",
     },
   ];
 
@@ -175,7 +175,7 @@ export default function DigitalLaw() {
         "Thu thập dữ liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
-        "Lưu trữ dữ liệu quá thời hạn",
+        "Lưu trữ dữ liệu quá th���i hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
@@ -420,7 +420,7 @@ export default function DigitalLaw() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
                 <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Bản quyền (Copyright)</CardTitle>
@@ -438,7 +438,7 @@ export default function DigitalLaw() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
                 <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Sở hữu trí tuệ</CardTitle>
@@ -456,7 +456,7 @@ export default function DigitalLaw() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
                 <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Fair Use/Sử dụng hợp lý</CardTitle>
@@ -474,7 +474,7 @@ export default function DigitalLaw() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
                 <Lock className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Creative Commons</CardTitle>
@@ -707,7 +707,7 @@ export default function DigitalLaw() {
           <div className="relative px-6 py-12 text-center">
             <Scale className="h-14 w-14 mx-auto mb-6 animate-pulse drop-shadow-lg" />
             <h1 className="text-3xl font-bold mb-3 tracking-wide leading-tight">
-              Pháp Luật Số & Bản Quyền
+              Pháp Lu���t Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
               Hiểu biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
