@@ -177,7 +177,7 @@ export default function DigitalLaw() {
       donts: [
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
-        "Sử dụng sai m��c đích đã khai báo",
+        "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
@@ -239,7 +239,7 @@ export default function DigitalLaw() {
         "Spam tin nhắn, bình luận",
         "Harassment, cyberbullying",
         "Chia sẻ link độc hại",
-        "Livestream n���i dung vi phạm",
+        "Livestream nội dung vi phạm",
         "Mua bán tài khoản, like, follow",
       ],
     },
@@ -355,7 +355,7 @@ export default function DigitalLaw() {
                       75 triệu
                     </div>
                     <div className="text-sm opacity-80">
-                      Mức ph��t tối đa VNĐ
+                      Mức phạt tối đa VNĐ
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
@@ -424,7 +424,7 @@ export default function DigitalLaw() {
               Khái Niệm Pháp Lý Cơ Bản
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đ���i số
+              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đ�����i số
             </p>
           </div>
 
@@ -490,7 +490,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Hệ th���ng license cho phép chia sẻ có điều kiện
+                  Hệ thống license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Các mức ��ộ từ attribution đến no derivatives
@@ -829,9 +829,18 @@ export default function DigitalLaw() {
       {/* Detailed Rule View Modal */}
       {selectedRule && (
         <div
-          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 z-50 p-4"
           onClick={hideRuleDetails}
-          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
         >
           <div
             className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl relative overflow-hidden"
