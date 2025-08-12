@@ -206,7 +206,7 @@ export default function DigitalLaw() {
       ],
       donts: [
         "Đăng tin giả, tin đồn thất thiệt",
-        "Xúc phạm danh dự, nhân phẩm",
+        "Xúc phạm danh d��, nhân phẩm",
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
@@ -466,7 +466,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Sử dụng tác phẩm có bản quyền mà không cần xin ph��p
+                  Sử dụng tác phẩm có bản quyền mà không cần xin ph����p
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Giáo dục, nghiên cứu, phê bình, tin tức
@@ -519,7 +519,7 @@ export default function DigitalLaw() {
                     
                     <div className="relative flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
+                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
                           <rule.icon className="h-6 w-6 text-white" />
                         </div>
                         <div>
@@ -748,7 +748,7 @@ export default function DigitalLaw() {
               </Card>
               <Card className="p-4 text-center">
                 <Shield className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
-                <div className="text-sm font-semibold">Sở h��u trí tuệ</div>
+                <div className="text-sm font-semibold">Sở hữu trí tuệ</div>
               </Card>
               <Card className="p-4 text-center">
                 <Users className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
