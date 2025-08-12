@@ -345,7 +345,7 @@ export default function DigitalLaw() {
                   <span className="text-yellow-300">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
-                  Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công ngh�� 
+                  Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
                   một cách hợp pháp trong thời đ���i số.
                 </p>
                 <div className="flex items-center space-x-6">
@@ -511,7 +511,7 @@ export default function DigitalLaw() {
           </div>
         </div>
 
-        {/* Legal Rules - THI��T KẾ MỚI (khác với 2 trang kia) */}
+        {/* Legal Rules - THIẾT KẾ MỚI (khác với 2 trang kia) */}
         <div className={`bg-gradient-to-br from-indigo-50 to-purple-50 py-20 transition-all duration-1000 delay-700 ${
           isPageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
@@ -650,7 +650,7 @@ export default function DigitalLaw() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                🎯 Tác Động Ph��p Lý Trong Thời Đại Số
+                🎯 Tác Động Pháp Lý Trong Thời Đại Số
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Những con số thực tế về vi phạm và tổn thất từ việc không tuân thủ luật
@@ -734,7 +734,7 @@ export default function DigitalLaw() {
               Pháp Luật Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
-              Hi���u biết pháp luật để sử dụng công nghệ một cách h���p pháp và an toàn
+              Hi���u biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
             </p>
 
             {/* Quick Stats Mobile */}
@@ -839,6 +839,7 @@ export default function DigitalLaw() {
         <div
           className="fixed inset-0 bg-black/60 z-50 p-4"
           onClick={hideRuleDetails}
+          data-modal="rule-details"
           style={{
             position: 'fixed',
             top: 0,
