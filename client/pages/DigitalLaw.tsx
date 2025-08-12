@@ -104,7 +104,7 @@ export default function DigitalLaw() {
     },
     {
       value: "2.1 tỷ",
-      label: "Thiệt hại bản quyền to��n cầu",
+      label: "Thiệt hại bản quyền toàn cầu",
       color: "from-blue-500 to-blue-600",
       description: "USD/năm 2023",
     },
@@ -231,7 +231,7 @@ export default function DigitalLaw() {
         "Báo cáo nội dung vi phạm",
         "Bảo vệ tài khoản bằng 2FA",
         "Khai báo quảng cáo có trả tiền",
-        "Tôn trọng quyền riêng tư ng��ời khác",
+        "Tôn trọng quyền riêng tư người khác",
         "Sử dụng real name trên nền tảng yêu cầu",
       ],
       donts: [
@@ -315,7 +315,7 @@ export default function DigitalLaw() {
       {/* =================================== */}
       <div className="hidden lg:block">
         {/* Hero Section - Desktop */}
-        <div className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden animate-entrance opacity-0 translate-y-8 transition-all duration-1000">
+        <div className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
 
@@ -462,7 +462,7 @@ export default function DigitalLaw() {
             <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
                 <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                <CardTitle className="text-lg">Fair Use/Sử dụng h��p lý</CardTitle>
+                <CardTitle className="text-lg">Fair Use/Sử dụng hợp lý</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
