@@ -430,7 +430,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Quyền pháp lý đối với các sáng tạo trí tuệ
+                  Quyền pháp lý đối với các s��ng tạo trí tuệ
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Bao gồm bản quyền, thương hiệu, bằng sáng chế
@@ -801,7 +801,10 @@ export default function DigitalLaw() {
           className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
           onClick={hideRuleDetails}
         >
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div
+            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             {(() => {
               const rule = legalRules.find(r => r.id === selectedRule);
               if (!rule) return null;
