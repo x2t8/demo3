@@ -251,7 +251,7 @@ export default function DigitalLaw() {
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
         "Bảo vệ thông tin khách hàng",
-        "Tu��n thủ quy định về quảng cáo",
+        "Tu��n thủ quy đ���nh về quảng cáo",
       ],
       donts: [
         "Bán hàng giả, hàng nhái",
@@ -626,38 +626,132 @@ export default function DigitalLaw() {
           </div>
         </div>
 
-        {/* Legal Statistics Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              📊 Thống Kê Pháp Lý Toàn Cầu
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những con số cho thấy tầm quan trọng của tuân thủ pháp luật số
-            </p>
+        {/* Digital Courthouse - Legal Impact Visualization */}
+        <div className="relative bg-gradient-to-b from-slate-100 to-gray-200 py-20 overflow-hidden">
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {digitalLawStats.map((stat, index) => (
-              <Card
-                key={index}
-                className="text-center hover:shadow-lg transition-shadow"
-              >
-                <CardContent className="p-6">
-                  <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center`}
-                  >
-                    <span className="text-2xl font-bold text-white">
-                      {stat.value}
-                    </span>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center mb-6">
+                <Gavel className="h-16 w-16 text-indigo-600 mr-4" />
+                <div className="w-px h-16 bg-gray-300 mx-4"></div>
+                <Scale className="h-16 w-16 text-purple-600" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                ⚖️ Toà Án Số Việt Nam
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Báo cáo tác động và thống kê vi phạm pháp luật số trong thời đại công nghệ
+              </p>
+            </div>
+
+            {/* Courthouse Layout Design */}
+            <div className="relative">
+              {/* Main Courthouse Building */}
+              <div className="bg-white rounded-t-3xl shadow-2xl border-8 border-gray-300 overflow-hidden">
+                {/* Courthouse Steps (Stats) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200">
+                  {digitalLawStats.map((stat, index) => (
+                    <div
+                      key={index}
+                      className="relative p-8 text-center group cursor-pointer hover:bg-gray-50 transition-all duration-300"
+                    >
+                      {/* Pillar Design */}
+                      <div className="relative">
+                        <div className="w-full h-2 bg-gray-300 rounded-full mb-6"></div>
+                        <div className="mx-auto w-20 h-32 bg-gradient-to-b from-gray-100 to-gray-200 rounded-lg border-4 border-gray-300 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                          <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                            {stat.value}
+                          </div>
+                        </div>
+                        <div className="w-full h-3 bg-gray-300 rounded-full"></div>
+                      </div>
+
+                      {/* Inscription Plate */}
+                      <div className="mt-6 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-lg p-4 border-2 border-amber-200">
+                        <h3 className="font-bold text-gray-900 text-sm mb-2 leading-tight">
+                          {stat.label}
+                        </h3>
+                        <p className="text-xs text-gray-700 italic">
+                          {stat.description}
+                        </p>
+                      </div>
+
+                      {/* Decorative elements */}
+                      <div className="absolute top-2 left-2 w-2 h-2 bg-indigo-400 rounded-full"></div>
+                      <div className="absolute top-2 right-2 w-2 h-2 bg-purple-400 rounded-full"></div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Courthouse Base/Foundation */}
+                <div className="bg-gradient-to-r from-slate-600 to-slate-700 p-6 text-center">
+                  <div className="flex items-center justify-center space-x-8 text-white">
+                    <div className="flex items-center space-x-2">
+                      <FileText className="h-5 w-5" />
+                      <span className="text-sm font-semibold">Luật Cybersecurity 2018</span>
+                    </div>
+                    <div className="w-px h-6 bg-white/30"></div>
+                    <div className="flex items-center space-x-2">
+                      <Shield className="h-5 w-5" />
+                      <span className="text-sm font-semibold">Nghị định 15/2020</span>
+                    </div>
+                    <div className="w-px h-6 bg-white/30"></div>
+                    <div className="flex items-center space-x-2">
+                      <Globe className="h-5 w-5" />
+                      <span className="text-sm font-semibold">Bộ TT&TT</span>
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900">
-                    {stat.label}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{stat.description}</p>
+                </div>
+              </div>
+
+              {/* Justice Flags */}
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="flex items-center space-x-4">
+                  <Flag className="h-8 w-8 text-red-600" />
+                  <Flag className="h-10 w-10 text-yellow-500" />
+                  <Flag className="h-8 w-8 text-red-600" />
+                </div>
+              </div>
+            </div>
+
+            {/* Legal Verdicts Summary */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-green-800 mb-2">Tuân Thủ Tốt</h4>
+                  <p className="text-green-700 text-sm">
+                    Doanh nghiệp tech đang cải thiện nhận thức pháp lý
+                  </p>
                 </CardContent>
               </Card>
-            ))}
+
+              <Card className="bg-gradient-to-br from-yellow-50 to-amber-50 border-yellow-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <AlertTriangle className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-yellow-800 mb-2">Cần Cảnh Báo</h4>
+                  <p className="text-yellow-700 text-sm">
+                    Vi phạm bản quyền vẫn phổ biến trong giới trẻ
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-red-50 to-rose-50 border-red-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <XCircle className="h-12 w-12 text-red-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-red-800 mb-2">Cần Xử Lý</h4>
+                  <p className="text-red-700 text-sm">
+                    Tăng cường giáo dục pháp luật cho cộng đồng
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
 
