@@ -205,7 +205,7 @@ export default function DigitalLaw() {
         "Sử dụng ngôn ngữ văn minh",
       ],
       donts: [
-        "Đăng tin giả, tin đ���n thất thiệt",
+        "Đăng tin giả, tin đồn thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
@@ -268,7 +268,7 @@ export default function DigitalLaw() {
         "Bán hàng giả, hàng nhái",
         "Quảng cáo gian dối, thổi phồng",
         "Trốn thuế, không khai báo doanh thu",
-        "L��a đảo, chiếm đoạt tài sản",
+        "Lừa đảo, chiếm đoạt tài sản",
         "Bán hàng cấm, hạn chế",
         "Vi phạm quyền lợi người tiêu dùng",
       ],
@@ -721,7 +721,7 @@ export default function DigitalLaw() {
               <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-4">
                 <div className="text-2xl font-bold mb-1">89%</div>
                 <div className="text-sm opacity-90 leading-tight">
-                  Vi phạm không cố ý
+                  Vi ph���m không cố ý
                 </div>
               </div>
               <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-4">
@@ -784,8 +784,8 @@ export default function DigitalLaw() {
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${rule.gradient} flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300`}>
-                      <rule.icon className="h-8 w-8 text-white animate-icon-float" />
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${rule.gradient} flex items-center justify-center shadow-sm`}>
+                      <rule.icon className="h-8 w-8 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-bold text-gray-900 text-lg leading-tight mb-2">
