@@ -172,7 +172,7 @@ export default function DigitalLaw() {
         "Tuân thủ quyền được quên",
       ],
       donts: [
-        "Thu thập dữ liệu không cần thiết",
+        "Thu th��p dữ liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
@@ -202,7 +202,7 @@ export default function DigitalLaw() {
         "Sử dụng ngôn ngữ văn minh",
       ],
       donts: [
-        "Đăng tin giả, tin đồn thất thiệt",
+        "Đăng tin giả, tin đồn thất thi��t",
         "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
@@ -233,7 +233,7 @@ export default function DigitalLaw() {
       ],
       donts: [
         "Tạo tài khoản giả mạo",
-        "Spam tin nhắn, bình luận",
+        "Spam tin nhắn, bình lu��n",
         "Harassment, cyberbullying",
         "Chia sẻ link độc hại",
         "Livestream nội dung vi phạm",
@@ -265,7 +265,7 @@ export default function DigitalLaw() {
         "Bán hàng giả, hàng nhái",
         "Quảng cáo gian dối, thổi phồng",
         "Trốn thuế, không khai báo doanh thu",
-        "Lừa đảo, chiếm đoạt tài sản",
+        "Lừa đảo, chi��m đoạt tài sản",
         "Bán hàng cấm, hạn chế",
         "Vi phạm quyền lợi người tiêu dùng",
       ],
@@ -781,8 +781,8 @@ export default function DigitalLaw() {
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${rule.gradient} flex items-center justify-center shadow-sm`}>
-                      <rule.icon className="h-8 w-8 text-white" />
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${rule.gradient} flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300`}>
+                      <rule.icon className="h-8 w-8 text-white animate-icon-float" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-bold text-gray-900 text-lg leading-tight mb-2">
