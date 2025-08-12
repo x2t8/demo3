@@ -78,10 +78,14 @@ export default function DigitalLaw() {
 
   const showRuleDetails = (ruleId: string) => {
     setSelectedRule(ruleId);
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
   };
 
   const hideRuleDetails = () => {
     setSelectedRule(null);
+    // Restore body scroll when modal is closed
+    document.body.style.overflow = 'unset';
   };
 
   const digitalLawStats = [
@@ -195,7 +199,7 @@ export default function DigitalLaw() {
       ],
       donts: [
         "Đăng tin giả, tin đồn thất thiệt",
-        "Xúc phạm danh dự, nhân phẩm",
+        "X��c phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
