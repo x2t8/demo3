@@ -247,7 +247,7 @@ export default function DigitalLaw() {
     {
       id: "cybersecurity",
       icon: Lock,
-      title: "An toàn thông tin mạng",
+      title: "An toàn thông tin m��ng",
       importance: "Đang nổi lên",
       importanceLevel: 85,
       color: "text-red-600 bg-red-100",
@@ -301,7 +301,7 @@ export default function DigitalLaw() {
                 </div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                   Pháp Luật Số &{" "}
-                  <span className="text-yellow-300">B��n Quyền</span>
+                  <span className="text-yellow-300">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
@@ -468,7 +468,7 @@ export default function DigitalLaw() {
           </div>
         </div>
 
-        {/* Legal Rules - THIẾT KẾ MỚI (khác với 2 trang kia) */}
+        {/* Legal Rules - THIẾT KẾ MỚI (khác v��i 2 trang kia) */}
         <div className="bg-gradient-to-br from-indigo-50 to-purple-50 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -570,6 +570,7 @@ export default function DigitalLaw() {
                         size="sm"
                         variant="outline"
                         className="w-full"
+                        onClick={() => showRuleDetails(rule.id)}
                       >
                         <Eye className="h-4 w-4 mr-2" />
                         Xem chi tiết ({rule.dos.length + rule.donts.length} quy tắc)
