@@ -139,7 +139,7 @@ export default function DigitalLaw() {
         "Tạo nội dung gốc của riêng mình",
         "Trích dẫn nguồn rõ ràng khi cần",
         "Mua license khi sử dụng thương mại",
-        "Tôn tr��ng quyền moral của tác giả",
+        "Tôn trọng quyền moral của tác giả",
       ],
       donts: [
         "Copy/paste nội dung không phép",
@@ -169,7 +169,7 @@ export default function DigitalLaw() {
         "Bảo mật dữ liệu thu thập được",
         "Cho phép người dùng chỉnh sửa/xóa",
         "Thông báo khi có rò rỉ dữ liệu",
-        "Tuân thủ quy���n được quên",
+        "Tuân thủ quyền được quên",
       ],
       donts: [
         "Thu thập dữ liệu không cần thiết",
@@ -207,7 +207,7 @@ export default function DigitalLaw() {
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
-        "Chia sẻ nội dung khiêu dâm",
+        "Chia sẻ nội dung khi��u dâm",
       ],
     },
     {
@@ -333,7 +333,7 @@ export default function DigitalLaw() {
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
                   một cách hợp pháp trong thời đ���i số.
                 </p>
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-6 animate-entrance opacity-0 translate-y-4 transition-all duration-900 delay-1000 stagger-children">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-yellow-300">
                       89%
@@ -423,11 +423,11 @@ export default function DigitalLaw() {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
-                <CardTitle className="text-lg">Bản quy���n (Copyright)</CardTitle>
+                <CardTitle className="text-lg">Bản quyền (Copyright)</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Quyền độc quyền của tác giả đối với tác phẩm do mình sáng tạo
+                  Quyền độc quyền của tác giả đối với t��c phẩm do mình sáng tạo
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Tự động có từ khi tác phẩm được tạo ra, không cần đăng ký
