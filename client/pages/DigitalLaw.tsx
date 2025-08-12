@@ -113,7 +113,7 @@ export default function DigitalLaw() {
     },
     {
       value: "150 triệu",
-      label: "Mức ph��t tối đa tổ chức",
+      label: "Mức phạt tối đa tổ chức",
       color: "from-orange-500 to-orange-600",
       description: "VNĐ tại Việt Nam",
     },
@@ -367,7 +367,7 @@ export default function DigitalLaw() {
                   <div className="relative inline-block">
                     <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-110 hover:rotate-3 transition-all duration-500 animate-gentle-wave" />
                     
-                    {/* Bên trái cân: Pháp luật s��� - TO HƠN */}
+                    {/* Bên trái cân: Pháp luật số - TO HƠN */}
                     <div className="absolute -left-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -440,7 +440,7 @@ export default function DigitalLaw() {
 
             <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Sở hữu trí tuệ</CardTitle>
               </CardHeader>
               <CardContent>
@@ -469,7 +469,7 @@ export default function DigitalLaw() {
                   Giáo dục, nghiên cứu, phê bình, tin tức
                 </Badge>
                 <div className="text-xs text-gray-500">
-                  VD: Review phim, Trích dẫn lu���n văn
+                  VD: Review phim, Trích dẫn luận văn
                 </div>
               </CardContent>
             </Card>
@@ -670,7 +670,7 @@ export default function DigitalLaw() {
                 Cùng Xây Dựng Không Gian Số Hợp Pháp!
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Hiểu biết pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
+                Hiểu biết pháp luật giúp bạn sáng tạo tự do và b���o vệ quyền lợi 
                 của bản thân cũng như người khác
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
