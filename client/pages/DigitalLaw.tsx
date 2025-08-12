@@ -203,7 +203,7 @@ export default function DigitalLaw() {
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
-        "Chia sẻ nội dung khiêu d��m",
+        "Chia sẻ nội dung khiêu dâm",
       ],
     },
     {
@@ -376,7 +376,7 @@ export default function DigitalLaw() {
                         <div className="text-center">
                           <Gavel className="h-12 w-12 mx-auto mb-3 text-white" />
                           <div className="text-lg font-bold text-white">Pháp Luật Số</div>
-                          <div className="text-sm opacity-90 text-white">Quy định & Luật lệ</div>
+                          <div className="text-sm opacity-90 text-white">Quy ��ịnh & Luật lệ</div>
                         </div>
                       </Button>
                     </div>
@@ -432,7 +432,7 @@ export default function DigitalLaw() {
                   Quyền độc quyền của tác giả đối với tác phẩm do mình sáng tạo
                 </p>
                 <Badge variant="outline" className="mb-3">
-                  Tự động có từ khi tác phẩm được tạo ra, không cần đăng ký
+                  Tự động có từ khi tác ph��m được tạo ra, không cần đăng ký
                 </Badge>
                 <div className="text-xs text-gray-500">
                   VD: Sách, Nhạc, Phim
@@ -685,8 +685,8 @@ export default function DigitalLaw() {
                 Cùng Xây Dựng Không Gian Số Hợp Pháp!
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Hiểu biết pháp luật giúp bạn sáng t��o tự do và bảo vệ quyền lợi 
-                của bản thân cũng như người khác
+                Hiểu biết pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
+                của bản thân cũng như ng��ời khác
               </p>
               <div className="flex justify-center">
                 <Button
@@ -769,7 +769,7 @@ export default function DigitalLaw() {
 
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
-              ⚖️ Quy định ph��p lý chi tiết
+              ⚖️ Quy định pháp lý chi tiết
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               6 lĩnh vực pháp lý quan trọng khi hoạt động số
@@ -869,7 +869,7 @@ export default function DigitalLaw() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-6 overflow-y-auto flex-1">
                     <p className="text-base text-gray-700 mb-6 leading-relaxed">{rule.description}</p>
 
                     {/* Stats - Compact Design */}
