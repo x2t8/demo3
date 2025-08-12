@@ -148,7 +148,7 @@ export default function DigitalLaw() {
         "Sử dụng tài nguyên Creative Commons",
         "Tạo nội dung gốc của riêng mình",
         "Trích dẫn nguồn rõ ràng khi cần",
-        "Mua license khi sử dụng thương mại",
+        "Mua license khi sử dụng thư��ng mại",
         "Tôn trọng quyền moral của tác giả",
       ],
       donts: [
@@ -172,13 +172,13 @@ export default function DigitalLaw() {
       impact: "An toàn thông tin",
       usage: "Mọi hoạt động số",
       description:
-        "Luật Bảo vệ d�� liệu cá nhân quy định nghiêm ngặt về việc thu thập, xử lý và sử dụng thông tin cá nhân.",
+        "Luật Bảo vệ dữ liệu cá nhân quy định nghiêm ngặt về việc thu thập, xử lý và sử dụng thông tin cá nhân.",
       dos: [
         "Xin đồng ý trước khi thu thập dữ liệu",
         "Giải thích rõ mục đích sử dụng",
         "Bảo mật dữ liệu thu thập được",
         "Cho phép người dùng chỉnh sửa/xóa",
-        "Thông báo khi có rò rỉ dữ liệu",
+        "Thông báo khi có rò rỉ dữ li��u",
         "Tuân thủ quyền được quên",
       ],
       donts: [
@@ -400,7 +400,7 @@ export default function DigitalLaw() {
                         <div className="text-center">
                           <Copyright className="h-12 w-12 mx-auto mb-3 text-white" />
                           <div className="text-lg font-bold text-white">Bản Quyền</div>
-                          <div className="text-sm opacity-90 text-white">Sở hữu trí tu��</div>
+                          <div className="text-sm opacity-90 text-white">Sở hữu trí tuệ</div>
                         </div>
                       </Button>
                     </div>
@@ -409,7 +409,7 @@ export default function DigitalLaw() {
                   <div className="mt-12 text-center">
                     <h3 className="text-2xl font-bold mb-3">Cân Bằng Công Lý</h3>
                     <p className="text-lg opacity-90">
-                      Sự kết hợp hoàn hảo giữa tuân thủ pháp luật và bảo vệ quyền sáng tạo
+                      Sự kết hợp hoàn hảo giữa tuân th�� pháp luật và bảo vệ quyền sáng tạo
                     </p>
                   </div>
                 </div>
@@ -519,7 +519,7 @@ export default function DigitalLaw() {
             {/* LAYOUT MỚI: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
               {legalRules.map((rule, index) => (
-                <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group scroll-reveal">
+                <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group legal-rule-card opacity-0 translate-y-8">
                   <CardHeader className={`bg-gradient-to-r ${rule.gradient} text-white rounded-t-lg relative overflow-hidden`}>
                     {/* Decorative background */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
