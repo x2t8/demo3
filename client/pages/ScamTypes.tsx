@@ -76,7 +76,7 @@ export default function ScamTypes() {
       value: "68%",
       label: "Qua điện thoại & SMS",
       color: "from-purple-500 to-purple-600",
-      description: "Hình thức phổ bi��n nhất",
+      description: "Hình thức phổ bi���n nhất",
     },
     {
       value: "25-45",
@@ -92,7 +92,7 @@ export default function ScamTypes() {
       icon: Phone,
       title: "Lừa đảo qua điện thoại",
       danger: "Cực kỳ nguy hiểm",
-      dangerLevel: 95,
+      dangerLevel: 92,
       color: "text-red-600 bg-red-100",
       gradient: "from-red-500 to-red-600",
       shortDesc: "Giả danh cơ quan, yêu cầu chuyển tiền",
@@ -118,7 +118,7 @@ export default function ScamTypes() {
       icon: MessageSquare,
       title: "Lừa đảo qua tin nhắn",
       danger: "Rất nguy hiểm",
-      dangerLevel: 85,
+      dangerLevel: 78,
       color: "text-orange-600 bg-orange-100",
       gradient: "from-orange-500 to-orange-600",
       shortDesc: "Link độc hại, mã OTP giả",
@@ -144,7 +144,7 @@ export default function ScamTypes() {
       icon: Mail,
       title: "Lừa đảo qua email",
       danger: "Nguy hiểm",
-      dangerLevel: 70,
+      dangerLevel: 65,
       color: "text-yellow-600 bg-yellow-100",
       gradient: "from-yellow-500 to-yellow-600",
       shortDesc: "Phishing, đầu tư tài chính",
@@ -168,11 +168,11 @@ export default function ScamTypes() {
     {
       id: "card",
       icon: CreditCard,
-      title: "Lừa đảo thẻ ngân hàng",
+      title: "Lừa đảo thẻ chính",
       danger: "Cực kỳ nguy hiểm",
-      dangerLevel: 90,
-      color: "text-red-600 bg-red-100",
-      gradient: "from-red-500 to-red-600",
+      dangerLevel: 88,
+      color: "text-blue-600 bg-blue-100",
+      gradient: "from-blue-500 to-blue-600",
       shortDesc: "Sao chép thẻ, đánh cắp PIN",
       popularity: "45%",
       avgLoss: "35 triệu VNĐ",
@@ -198,21 +198,24 @@ export default function ScamTypes() {
       <Header />
       <DisclaimerBanner />
 
-      {/* Desktop/Tablet: Original Layout (kept as is) */}
+      {/* Desktop/Tablet: New Layout theo hình */}
       <div className="hidden md:block">
         {/* Hero Section */}
-        <section className="px-4 py-16 lg:py-24 bg-gradient-to-br from-red-500 via-orange-500 to-red-600 relative overflow-hidden">
+        <section className="px-4 py-16 lg:py-20 bg-gradient-to-br from-red-500 via-orange-500 to-red-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10" />
           <div className="container mx-auto relative z-10">
             <div className="text-center text-white mb-12">
               <div className="mb-6">
-                <AlertTriangle className="h-16 w-16 lg:h-20 lg:w-20 mx-auto mb-4 animate-pulse" />
+                <AlertTriangle className="h-12 w-12 lg:h-16 lg:w-16 mx-auto mb-4 text-white" />
+                <div className="bg-white/20 backdrop-blur-md rounded-lg px-4 py-2 inline-block">
+                  <span className="text-sm font-medium">CẢNH BÁO QUAN TRỌNG</span>
+                </div>
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 animate-text-breathe">
-                🚨 Lừa Đảo Online
+              <h1 className="text-3xl lg:text-5xl font-bold mb-4">
+                Các Dạng Lừa Đảo Chi Tiết
               </h1>
-              <p className="text-xl lg:text-2xl opacity-95 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Nhận biết & Phòng tránh
+              <p className="text-lg lg:text-xl opacity-95 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Phân tích sâu từng loại lừa đảo với dữ liệu thực tế, thống kê cập nhật và hướng dẫn phòng tránh hiệu quả nhất.
               </p>
               <div className="flex flex-wrap justify-center gap-6 text-lg">
                 <div className="bg-white/20 backdrop-blur-md rounded-xl px-6 py-3">
@@ -225,121 +228,164 @@ export default function ScamTypes() {
                 </div>
                 <div className="bg-white/20 backdrop-blur-md rounded-xl px-6 py-3">
                   <span className="font-bold">68%</span>
-                  <span className="ml-2">qua ĐT</span>
+                  <span className="ml-2">qua ĐT & SMS</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Desktop Scam Cards */}
-        <section className="px-4 py-16 bg-gray-50">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-              🔍 Chọn loại để tìm hiểu
+        {/* Desktop Scam Cards - New Design */}
+        <section className="px-4 py-16 bg-white">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-2xl font-bold text-center mb-3 text-gray-900">
+              Phân loại chi tiết
             </h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Tap vào card để xem chi tiết phòng tránh
-            </p>
+            <div className="flex justify-center gap-6 mb-12 text-sm flex-wrap">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-red-500" />
+                <span>Lừa đảo qua điện thoại</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MessageSquare className="w-4 h-4 text-orange-500" />
+                <span>Lừa đảo qua SMS</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-yellow-500" />
+                <span>Lừa đảo qua Email</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CreditCard className="w-4 h-4 text-blue-500" />
+                <span>Lừa đảo thẻ chính</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Share2 className="w-4 h-4 text-gray-500" />
+                <span>Chia sẻ</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Bookmark className="w-4 h-4 text-gray-500" />
+                <span>Đáo Cầu Trợ</span>
+              </div>
+            </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {scamDetails.map((scam) => (
-                <Card
-                  key={scam.id}
-                  className={`group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl border-2 ${
-                    selectedScam === scam.id 
-                      ? "ring-4 ring-red-300 shadow-2xl" 
-                      : "hover:border-red-300"
-                  }`}
-                  onClick={() => setSelectedScam(selectedScam === scam.id ? null : scam.id)}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className={`p-4 rounded-2xl ${scam.color} shadow-lg group-hover:scale-110 transition-transform`}>
-                        <scam.icon className="h-8 w-8" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <h3 className="text-xl font-bold text-gray-900">
-                            {scam.title}
-                          </h3>
-                          <Badge
-                            variant="destructive"
-                            className="text-xs animate-pulse"
-                          >
-                            Cực kỳ nguy hiểm
-                          </Badge>
-                        </div>
-                        <p className="text-gray-600 mb-4">{scam.shortDesc}</p>
-                        <div className="flex items-center justify-between text-sm">
-                          <div className="flex items-center gap-4">
-                            <span className="text-orange-600 font-semibold">
-                              📈 {scam.popularity}
-                            </span>
-                            <span className="text-red-600 font-semibold">
-                              💰 {scam.avgLoss}
-                            </span>
-                          </div>
-                          <ChevronRight className={`h-5 w-5 text-gray-400 transition-transform ${selectedScam === scam.id ? 'rotate-90' : ''}`} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {scamDetails.map((scam, index) => {
+                const cardColors = [
+                  { bg: 'bg-red-100', icon: 'text-red-600', progress: 'bg-red-500', border: 'border-red-200' },
+                  { bg: 'bg-orange-100', icon: 'text-orange-600', progress: 'bg-orange-500', border: 'border-orange-200' },
+                  { bg: 'bg-yellow-100', icon: 'text-yellow-600', progress: 'bg-yellow-500', border: 'border-yellow-200' },
+                  { bg: 'bg-blue-100', icon: 'text-blue-600', progress: 'bg-blue-500', border: 'border-blue-200' }
+                ];
+                const colors = cardColors[index % 4];
+                
+                return (
+                  <Card
+                    key={scam.id}
+                    className={`group cursor-pointer transition-all duration-300 hover:shadow-lg border-2 ${colors.bg} ${colors.border}`}
+                    onClick={() => setSelectedScam(selectedScam === scam.id ? null : scam.id)}
+                  >
+                    <CardContent className="p-6 text-center">
+                      <div className="flex justify-center mb-4">
+                        <div className={`w-16 h-16 rounded-2xl ${colors.bg} border-2 border-white shadow-sm flex items-center justify-center`}>
+                          <scam.icon className={`h-8 w-8 ${colors.icon}`} />
                         </div>
                       </div>
-                    </div>
+                      
+                      <h3 className="font-bold text-gray-900 mb-2 text-sm leading-tight">
+                        {scam.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 text-xs mb-3 leading-relaxed">
+                        {scam.shortDesc}
+                      </p>
+                      
+                      <div className="space-y-2 mb-4">
+                        <div className="flex justify-between items-center text-xs">
+                          <span className="text-gray-600">Tỷ lệ gặp phải</span>
+                          <span className={`font-semibold ${colors.icon}`}>{scam.popularity}</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div 
+                            className={`h-2 rounded-full ${colors.progress} transition-all duration-1000`}
+                            style={{ width: scam.popularity }}
+                          ></div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center text-xs mt-2">
+                          <span className="text-gray-600">Avg thiệt hại</span>
+                          <span className={`font-semibold ${colors.icon}`}>{scam.avgLoss}</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div 
+                            className={`h-2 rounded-full ${colors.progress} transition-all duration-1000`}
+                            style={{ width: `${scam.dangerLevel}%` }}
+                          ></div>
+                        </div>
+                      </div>
 
-                    {selectedScam === scam.id && (
-                      <div className="mt-6 pt-6 border-t space-y-6 animate-in slide-in-from-top duration-500">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                          <div className="bg-red-50 rounded-xl p-4 border border-red-200">
-                            <h4 className="font-semibold text-red-700 mb-3 flex items-center gap-2">
-                              <XCircle className="h-4 w-4" />
-                              Thủ đoạn thường gặp
-                            </h4>
-                            <div className="space-y-2">
-                              {scam.techniques.map((technique, idx) => (
-                                <div key={idx} className="flex items-start gap-2 text-sm">
-                                  <span className="text-red-500 mt-1">•</span>
-                                  <span className="text-gray-700">{technique}</span>
-                                </div>
-                              ))}
+                      {/* Expanded Details */}
+                      {selectedScam === scam.id && (
+                        <div className="mt-4 pt-4 border-t text-left">
+                          <div className="grid grid-cols-1 gap-4">
+                            <div className="bg-red-50 rounded-lg p-3 border border-red-200">
+                              <h4 className="font-semibold text-red-700 mb-2 flex items-center gap-1 text-xs">
+                                <XCircle className="h-3 w-3" />
+                                Thủ đoạn
+                              </h4>
+                              <div className="space-y-1">
+                                {scam.techniques.slice(0, 2).map((technique, idx) => (
+                                  <div key={idx} className="flex items-start gap-1 text-xs">
+                                    <span className="text-red-500 mt-0.5">•</span>
+                                    <span className="text-gray-700">{technique}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            <div className="bg-green-50 rounded-lg p-3 border border-green-200">
+                              <h4 className="font-semibold text-green-700 mb-2 flex items-center gap-1 text-xs">
+                                <CheckCircle className="h-3 w-3" />
+                                Phòng chống
+                              </h4>
+                              <div className="space-y-1">
+                                {scam.prevention.slice(0, 2).map((prevention, idx) => (
+                                  <div key={idx} className="flex items-start gap-1 text-xs">
+                                    <span className="text-green-500 mt-0.5">✓</span>
+                                    <span className="text-gray-700">{prevention}</span>
+                                  </div>
+                                ))}
+                              </div>
                             </div>
                           </div>
 
-                          <div className="bg-green-50 rounded-xl p-4 border border-green-200">
-                            <h4 className="font-semibold text-green-700 mb-3 flex items-center gap-2">
-                              <CheckCircle className="h-4 w-4" />
-                              Cách phòng chống
-                            </h4>
-                            <div className="space-y-2">
-                              {scam.prevention.map((prevention, idx) => (
-                                <div key={idx} className="flex items-start gap-2 text-sm">
-                                  <span className="text-green-500 mt-1">✓</span>
-                                  <span className="text-gray-700">{prevention}</span>
-                                </div>
-                              ))}
-                            </div>
+                          <div className="flex gap-2 mt-3">
+                            <Button
+                              size="sm"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleBookmark(scam.id);
+                              }}
+                              variant={bookmarkedScams.includes(scam.id) ? "default" : "outline"}
+                              className="flex-1 text-xs h-7"
+                            >
+                              <Bookmark className={`h-3 w-3 mr-1 ${bookmarkedScams.includes(scam.id) ? 'fill-current' : ''}`} />
+                              {bookmarkedScams.includes(scam.id) ? 'Đã lưu' : 'Lưu'}
+                            </Button>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              onClick={(e) => e.stopPropagation()}
+                              className="text-xs h-7 px-2"
+                            >
+                              <Share2 className="h-3 w-3" />
+                            </Button>
                           </div>
                         </div>
-
-                        <div className="flex gap-3">
-                          <Button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              toggleBookmark(scam.id);
-                            }}
-                            variant={bookmarkedScams.includes(scam.id) ? "default" : "outline"}
-                            className="flex-1"
-                          >
-                            <Bookmark className={`h-4 w-4 mr-2 ${bookmarkedScams.includes(scam.id) ? 'fill-current' : ''}`} />
-                            {bookmarkedScams.includes(scam.id) ? 'Đã lưu' : 'Lưu lại'}
-                          </Button>
-                          <Button variant="outline" onClick={(e) => e.stopPropagation()}>
-                            <Share2 className="h-4 w-4" />
-                          </Button>
-                        </div>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -600,7 +646,7 @@ export default function ScamTypes() {
                   title: "Lừa đảo đầu tư Forex",
                   type: "Mạng xã hội",
                   icon: TrendingUp,
-                  story: "Một người được bạn Zalo giới thiệu sàn đầu tư Forex với lãi suất bất thường. Sau khi nạp tiền, họ không thể rút tiền và bị chặn liên lạc.",
+                  story: "Một người được bạn Zalo giới thiệu sàn đầu tư Forex với lãi su��t bất thường. Sau khi nạp tiền, họ không thể rút tiền và bị chặn liên lạc.",
                   damage: "100 triệu VNĐ",
                   redFlags: [
                     "Lãi suất quá cao (30%/tháng)",
