@@ -205,7 +205,7 @@ export default function DigitalLaw() {
         "Đăng tin giả, tin đồn thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
-        "Quảng cáo sản phẩm trái ph��p",
+        "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
         "Chia sẻ nội dung khiêu dâm",
       ],
@@ -236,7 +236,7 @@ export default function DigitalLaw() {
         "Spam tin nhắn, bình luận",
         "Harassment, cyberbullying",
         "Chia sẻ link độc hại",
-        "Livestream nội dung vi phạm",
+        "Livestream n��i dung vi phạm",
         "Mua bán tài khoản, like, follow",
       ],
     },
@@ -409,7 +409,7 @@ export default function DigitalLaw() {
         </div>
 
         {/* Legal Concepts Overview */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-reveal">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Khái Niệm Pháp Lý Cơ Bản
@@ -502,11 +502,11 @@ export default function DigitalLaw() {
                 📋 Quy Định Pháp Lý Chi Tiết
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Hướng dẫn chi tiết về các quy định pháp lý trong hoạt động số
+                Hướng dẫn chi tiết về các quy định pháp lý trong ho��t động số
               </p>
             </div>
 
-            {/* LAYOUT M���I: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
+            {/* LAYOUT MỚI: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {legalRules.map((rule, index) => (
                 <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group">
@@ -889,7 +889,7 @@ export default function DigitalLaw() {
                       <div>
                         <div className="flex items-center space-x-2 mb-4">
                           <XCircle className="h-6 w-6 text-red-500" />
-                          <h3 className="text-xl font-bold text-red-700">Không nên làm</h3>
+                          <h3 className="text-xl font-bold text-red-700">Kh��ng nên làm</h3>
                         </div>
                         <div className="space-y-3">
                           {rule.donts.map((item, idx) => (
