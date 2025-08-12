@@ -175,7 +175,7 @@ export default function DigitalLaw() {
     {
       id: "content",
       icon: FileText,
-      title: "N���i dung hợp pháp",
+      title: "Nội dung hợp pháp",
       importance: "Quan trọng cao",
       importanceLevel: 94,
       color: "text-green-600 bg-green-100",
@@ -493,7 +493,9 @@ export default function DigitalLaw() {
         </div>
 
         {/* Legal Rules - THIẾT KẾ MỚI (khác với 2 trang kia) */}
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 py-20">
+        <div className={`bg-gradient-to-br from-indigo-50 to-purple-50 py-20 transition-all duration-1000 delay-700 ${
+          isPageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
