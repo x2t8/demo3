@@ -44,7 +44,7 @@ import SocialShare from "@/components/SocialShare";
 import RealWorldExamples from "@/components/RealWorldExamples";
 
 export default function ScamTypes() {
-  const [selectedScam, setSelectedScam] = useState<string | null>(null);
+  const [selectedScams, setSelectedScams] = useState<string[]>([]);
   const [bookmarkedScams, setBookmarkedScams] = useState<string[]>([]);
 
   // Initialize protective animations
@@ -127,7 +127,7 @@ export default function ScamTypes() {
       description:
         "Tin nhắn chứa link độc hại hoặc yêu cầu cung cấp mã OTP, thông tin thẻ ngân hàng.",
       techniques: [
-        "Gửi link độc hại",
+        "Gửi link đ��c hại",
         "Giả mạo thông báo ngân hàng",
         "Yêu cầu mã OTP",
         "Khuyến mại giả",
@@ -227,7 +227,7 @@ export default function ScamTypes() {
                   </h1>
 
                   <p className="text-lg lg:text-xl opacity-90 leading-relaxed max-w-lg">
-                    Học cách nhận biết, phòng tránh và bảo vệ bản thân khỏi các hình thức lừa đảo trực tuyến trong thời đại số hiện đại.
+                    Học cách nhận biết, phòng tránh và bảo vệ b��n thân khỏi các hình thức lừa đảo trực tuyến trong thời đại số hiện đại.
                   </p>
                 </div>
 
@@ -370,7 +370,13 @@ export default function ScamTypes() {
                   <Card
                     key={scam.id}
                     className={`group cursor-pointer transition-all duration-300 hover:shadow-lg border-2 ${colors.bg} ${colors.border}`}
-                    onClick={() => setSelectedScam(selectedScam === scam.id ? null : scam.id)}
+                    onClick={() => {
+                      setSelectedScams(prev =>
+                        prev.includes(scam.id)
+                          ? prev.filter(id => id !== scam.id)
+                          : [...prev, scam.id]
+                      );
+                    }}
                   >
                     <CardContent className="p-6 text-center">
                       <div className="flex justify-center mb-4">
@@ -412,7 +418,7 @@ export default function ScamTypes() {
                       </div>
 
                       {/* Expanded Details */}
-                      {selectedScam === scam.id && (
+                      {selectedScams.includes(scam.id) && (
                         <div className="mt-4 pt-4 border-t text-left">
                           <div className="grid grid-cols-1 gap-4">
                             <div className="bg-red-50 rounded-lg p-3 border border-red-200">
@@ -545,7 +551,13 @@ export default function ScamTypes() {
                 <Card
                   key={scam.id}
                   className="bg-white border border-red-200 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer"
-                  onClick={() => setSelectedScam(selectedScam === scam.id ? null : scam.id)}
+                  onClick={() => {
+                    setSelectedScams(prev =>
+                      prev.includes(scam.id)
+                        ? prev.filter(id => id !== scam.id)
+                        : [...prev, scam.id]
+                    );
+                  }}
                 >
                   <CardContent className="p-3">
                     <div className="flex items-start gap-3">
@@ -575,13 +587,13 @@ export default function ScamTypes() {
                               💰 {scam.avgLoss}
                             </span>
                           </div>
-                          <ChevronRight className={`w-3 h-3 text-gray-400 transition-transform duration-200 ${selectedScam === scam.id ? 'rotate-90' : ''}`} />
+                          <ChevronRight className={`w-3 h-3 text-gray-400 transition-transform duration-200 ${selectedScams.includes(scam.id) ? 'rotate-90' : ''}`} />
                         </div>
                       </div>
                     </div>
 
                     {/* Expanded Details */}
-                    {selectedScam === scam.id && (
+                    {selectedScams.includes(scam.id) && (
                       <div className="mt-3 pt-3 border-t border-red-100">
                         {/* Warning Badge */}
                         <div className="flex justify-center mb-3">
