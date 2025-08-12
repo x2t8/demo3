@@ -70,6 +70,7 @@ export default function DigitalLaw() {
   };
 
   const showRuleDetails = (ruleId: string) => {
+    console.log('Showing rule details for:', ruleId);
     setSelectedRule(ruleId);
   };
 
@@ -122,7 +123,7 @@ export default function DigitalLaw() {
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
         "Tạo nội dung gốc của riêng mình",
-        "Trích dẫn nguồn rõ r��ng khi cần",
+        "Trích dẫn nguồn rõ ràng khi cần",
         "Mua license khi sử dụng thư��ng mại",
         "Tôn trọng quyền moral của tác giả",
       ],
