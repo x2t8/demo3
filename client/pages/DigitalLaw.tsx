@@ -175,7 +175,7 @@ export default function DigitalLaw() {
         "Tuân thủ quyền được quên",
       ],
       donts: [
-        "Thu th��p d��� liệu không cần thiết",
+        "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
@@ -328,9 +328,9 @@ export default function DigitalLaw() {
                     CÔNG LÝ VÀ PHÁP QUYỀN
                   </span>
                 </div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-entrance opacity-0 translate-y-6 transition-all duration-800 delay-500">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                   Pháp Luật Số &{" "}
-                  <span className="text-yellow-300 animate-text-breathe">Bản Quyền</span>
+                  <span className="text-yellow-300">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
@@ -444,7 +444,7 @@ export default function DigitalLaw() {
             <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
                 <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                <CardTitle className="text-lg">Sở hữu trí tuệ</CardTitle>
+                <CardTitle className="text-lg">S��� hữu trí tuệ</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
@@ -673,7 +673,7 @@ export default function DigitalLaw() {
                 Cùng Xây Dựng Không Gian Số Hợp Pháp!
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Hiểu bi��t pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
+                Hi���u biết pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
                 của bản thân cũng như người khác
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
