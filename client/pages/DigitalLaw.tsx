@@ -362,7 +362,7 @@ export default function DigitalLaw() {
               </div>
 
               <div className="relative">
-                {/* Bi���u tượng cân công lý lớn làm button */}
+                {/* Bi���u tượng cân công lý lớn l��m button */}
                 <div className="text-center">
                   <div className="relative inline-block">
                     <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-110 hover:rotate-3 transition-all duration-500 animate-gentle-wave" />
@@ -484,7 +484,7 @@ export default function DigitalLaw() {
                   Hệ thống license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
-                  Các mức độ từ attribution đến no derivatives
+                  Các mức ��ộ từ attribution đến no derivatives
                 </Badge>
                 <div className="text-xs text-gray-500">
                   VD: Wikipedia, Unsplash
@@ -812,8 +812,8 @@ export default function DigitalLaw() {
 
       {/* Detailed Rule View Modal */}
       {selectedRule && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto modal-content transform scale-95 opacity-0 transition-all duration-300">
             {(() => {
               const rule = legalRules.find(r => r.id === selectedRule);
               if (!rule) return null;
