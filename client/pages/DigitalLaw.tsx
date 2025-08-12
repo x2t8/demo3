@@ -368,7 +368,7 @@ export default function DigitalLaw() {
                 {/* Bi���u tượng cân công lý lớn l��m button */}
                 <div className="text-center">
                   <div className="relative inline-block">
-                    <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-110 hover:rotate-3 transition-all duration-500 animate-gentle-wave" />
+                    <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-105 transition-transform duration-300" />
                     
                     {/* Bên trái cân: Pháp luật số - TO HƠN */}
                     <div className="absolute -left-24 top-12">
@@ -430,7 +430,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Quyền độc quyền của tác giả đối với tác phẩm do mình sáng tạo
+                  Quyền độc quyền của tác giả đối với tác phẩm do mình sáng t���o
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Tự động có từ khi tác phẩm được tạo ra, không cần đăng ký
