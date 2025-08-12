@@ -205,7 +205,7 @@ export default function DigitalLaw() {
     {
       id: "social-media",
       icon: Smartphone,
-      title: "Quy định mạng xã hội",
+      title: "Quy đ���nh mạng xã hội",
       importance: "Quan trọng cao",
       importanceLevel: 91,
       color: "text-orange-600 bg-orange-100",
@@ -377,7 +377,7 @@ export default function DigitalLaw() {
                       </Button>
                     </div>
 
-                    {/* Bên phải cân: B��n quyền - TO HƠN */}
+                    {/* Bên phải cân: Bản quyền - TO HƠN */}
                     <div className="absolute -right-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -695,7 +695,9 @@ export default function DigitalLaw() {
       {/* =================================== */}
       {/* MOBILE VERSION                      */}
       {/* =================================== */}
-      <div className="lg:hidden">
+      <div className={`lg:hidden transition-all duration-800 delay-300 ${
+        isPageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}>
         {/* Mobile Header */}
         <div className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
