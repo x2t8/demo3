@@ -51,6 +51,8 @@ import DisclaimerBanner from "@/components/DisclaimerBanner";
 export default function DigitalLaw() {
   const [bookmarkedItems, setBookmarkedItems] = useState<string[]>([]);
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
+
+  useScrollReveal();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const scrollRef = useScrollReveal();
 
@@ -173,7 +175,7 @@ export default function DigitalLaw() {
         "Tuân thủ quyền được quên",
       ],
       donts: [
-        "Thu thập dữ liệu không cần thiết",
+        "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
@@ -464,7 +466,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Sử dụng tác phẩm có bản quyền mà không cần xin phép
+                  Sử dụng tác phẩm có bản quyền mà không cần xin ph��p
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Giáo dục, nghiên cứu, phê bình, tin tức
