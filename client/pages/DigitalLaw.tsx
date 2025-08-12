@@ -158,7 +158,7 @@ export default function DigitalLaw() {
       importanceLevel: 96,
       color: "text-blue-600 bg-blue-100",
       gradient: "from-blue-500 to-cyan-500",
-      shortDesc: "Tuân thủ luật bảo vệ dữ li���u cá nhân",
+      shortDesc: "Tuân thủ luật bảo vệ dữ liệu cá nhân",
       impact: "An toàn thông tin",
       usage: "Mọi hoạt động số",
       description:
@@ -319,8 +319,8 @@ export default function DigitalLaw() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="flex items-center mb-6">
-                  <Scale className="h-12 w-12 mr-4 animate-pulse" />
+                <div className="flex items-center mb-6 animate-entrance opacity-0 translate-y-4 transition-all duration-700 delay-300">
+                  <Scale className="h-12 w-12 mr-4 animate-pulse hover:animate-spin transition-transform" />
                   <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     CÔNG LÝ VÀ PHÁP QUYỀN
                   </span>
@@ -415,7 +415,7 @@ export default function DigitalLaw() {
               Khái Niệm Pháp Lý Cơ Bản
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những kiến thức nền tảng về luật sở hữu trí tuệ trong th��i đại số
+              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đại số
             </p>
           </div>
 
@@ -707,7 +707,7 @@ export default function DigitalLaw() {
           <div className="relative px-6 py-12 text-center">
             <Scale className="h-14 w-14 mx-auto mb-6 animate-pulse drop-shadow-lg" />
             <h1 className="text-3xl font-bold mb-3 tracking-wide leading-tight">
-              Pháp Luật S�� & Bản Quyền
+              Pháp Luật Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
               Hiểu biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
@@ -917,7 +917,7 @@ export default function DigitalLaw() {
                         ) : (
                           <Bookmark className="h-4 w-4 mr-2" />
                         )}
-                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
+                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu ��ể học sau'}
                       </Button>
                       <Button variant="outline" onClick={hideRuleDetails}>
                         <ArrowLeft className="h-4 w-4 mr-2" />
