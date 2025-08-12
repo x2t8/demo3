@@ -188,7 +188,7 @@ export default function DigitalLaw() {
       impact: "Môi trường lành mạnh",
       usage: "Mạng xã hội, website",
       description:
-        "Nội dung đăng tải phải tuân thủ luật pháp Việt Nam, không vi phạm đạo đức xã hội và quy định nền tảng.",
+        "Nội dung đăng tải phải tuân thủ luật pháp Việt Nam, không vi phạm đạo đức xã h��i và quy định nền tảng.",
       dos: [
         "Ki���m tra tính chính xác thông tin",
         "Tôn trọng các giá trị xã hội",
@@ -199,7 +199,7 @@ export default function DigitalLaw() {
       ],
       donts: [
         "Đăng tin giả, tin đồn thất thiệt",
-        "X��c phạm danh dự, nhân phẩm",
+        "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
@@ -822,13 +822,19 @@ export default function DigitalLaw() {
       {/* Detailed Rule View Modal */}
       {selectedRule && (
         <div
-          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 overflow-y-auto"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
           onClick={hideRuleDetails}
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
         >
           <div
-            className="bg-white rounded-2xl max-w-4xl w-full my-8 shadow-2xl relative"
+            className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl relative overflow-hidden"
             onClick={(e) => e.stopPropagation()}
-            style={{ maxHeight: 'calc(100vh - 4rem)' }}
+            style={{
+              maxHeight: 'calc(100vh - 8rem)',
+              position: 'relative',
+              top: '0',
+              transform: 'none'
+            }}
           >
             {(() => {
               const rule = legalRules.find(r => r.id === selectedRule);
