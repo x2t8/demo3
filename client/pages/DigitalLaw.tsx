@@ -75,10 +75,21 @@ export default function DigitalLaw() {
 
   const showRuleDetails = (ruleId: string) => {
     setSelectedRule(ruleId);
+    setIsModalVisible(true);
+    // Add delay for modal animation
+    setTimeout(() => {
+      const modal = document.querySelector('.modal-content');
+      modal?.classList.add('animate-modal-in');
+    }, 50);
   };
 
   const hideRuleDetails = () => {
-    setSelectedRule(null);
+    const modal = document.querySelector('.modal-content');
+    modal?.classList.add('animate-modal-out');
+    setTimeout(() => {
+      setSelectedRule(null);
+      setIsModalVisible(false);
+    }, 300);
   };
 
   const digitalLawStats = [
@@ -193,7 +204,7 @@ export default function DigitalLaw() {
       donts: [
         "Đăng tin giả, tin đồn thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
-        "Kích đ���ng bạo lực, thù hận",
+        "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
         "Chia sẻ nội dung khiêu dâm",
@@ -224,7 +235,7 @@ export default function DigitalLaw() {
         "Tạo tài khoản giả mạo",
         "Spam tin nhắn, bình luận",
         "Harassment, cyberbullying",
-        "Chia sẻ link đ��c hại",
+        "Chia sẻ link độc hại",
         "Livestream nội dung vi phạm",
         "Mua bán tài khoản, like, follow",
       ],
@@ -248,7 +259,7 @@ export default function DigitalLaw() {
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
         "Bảo vệ thông tin khách hàng",
-        "Tuân thủ quy định về quảng cáo",
+        "Tuân thủ quy định v�� quảng cáo",
       ],
       donts: [
         "Bán hàng giả, hàng nhái",
@@ -386,7 +397,7 @@ export default function DigitalLaw() {
                   </div>
                   
                   <div className="mt-12 text-center">
-                    <h3 className="text-2xl font-bold mb-3">Cân Bằng Công Lý</h3>
+                    <h3 className="text-2xl font-bold mb-3">Cân B���ng Công Lý</h3>
                     <p className="text-lg opacity-90">
                       Sự kết hợp hoàn hảo giữa tuân thủ pháp luật và bảo vệ quyền sáng tạo
                     </p>
@@ -734,7 +745,7 @@ export default function DigitalLaw() {
               </Card>
               <Card className="p-4 text-center">
                 <Shield className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
-                <div className="text-sm font-semibold">Sở hữu trí tuệ</div>
+                <div className="text-sm font-semibold">Sở hữu trí tu��</div>
               </Card>
               <Card className="p-4 text-center">
                 <Users className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
