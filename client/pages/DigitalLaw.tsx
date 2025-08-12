@@ -304,7 +304,9 @@ export default function DigitalLaw() {
       {/* =================================== */}
       {/* DESKTOP VERSION - Full Featured     */}
       {/* =================================== */}
-      <div className="hidden lg:block">
+      <div className={`hidden lg:block transition-all duration-800 delay-300 ${
+        isPageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}>
         {/* Hero Section - Desktop */}
         <div className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -324,7 +326,7 @@ export default function DigitalLaw() {
                   <span className="text-yellow-300">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
-                  Hi��u biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
+                  Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
                   một cách hợp pháp trong thời đ���i số.
                 </p>
                 <div className="flex items-center space-x-6">
@@ -375,7 +377,7 @@ export default function DigitalLaw() {
                       </Button>
                     </div>
 
-                    {/* Bên phải cân: Bản quyền - TO HƠN */}
+                    {/* Bên phải cân: B��n quyền - TO HƠN */}
                     <div className="absolute -right-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
