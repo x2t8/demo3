@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useScrollReveal, useStaggeredReveal } from "@/hooks/useScrollReveal";
 import {
   Scale,
   Copyright,
@@ -232,7 +233,7 @@ export default function DigitalLaw() {
         "Khai báo và nộp thuế đúng quy định",
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
-        "Bảo vệ thông tin khách hàng",
+        "Bảo vệ thông tin kh��ch hàng",
         "Tuân thủ quy định về quảng cáo",
       ],
       donts: [
