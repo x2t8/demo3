@@ -330,7 +330,7 @@ export default function DigitalLaw() {
                 </div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                   Pháp Luật Số &{" "}
-                  <span className="text-yellow-300">Bản Quyền</span>
+                  <span className="text-yellow-300">Bản Quy��n</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
@@ -425,7 +425,7 @@ export default function DigitalLaw() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Bản quyền (Copyright)</CardTitle>
               </CardHeader>
               <CardContent>
@@ -487,7 +487,7 @@ export default function DigitalLaw() {
                   Hệ thống license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
-                  Các mức ��ộ từ attribution đến no derivatives
+                  Các m��c ��ộ từ attribution đến no derivatives
                 </Badge>
                 <div className="text-xs text-gray-500">
                   VD: Wikipedia, Unsplash
