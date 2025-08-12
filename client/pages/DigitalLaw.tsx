@@ -164,7 +164,7 @@ export default function DigitalLaw() {
         "Tuân thủ quyền được quên",
       ],
       donts: [
-        "Thu thập d��� liệu không cần thiết",
+        "Thu thập d��� liệu không cần thi��t",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
@@ -257,7 +257,7 @@ export default function DigitalLaw() {
         "Bán hàng giả, hàng nhái",
         "Quảng cáo gian dối, thổi phồng",
         "Trốn thuế, không khai báo doanh thu",
-        "Lừa đảo, chiếm đoạt tài sản",
+        "Lừa đảo, chiếm đoạt tài s��n",
         "Bán hàng cấm, hạn chế",
         "Vi phạm quyền lợi người tiêu dùng",
       ],
@@ -616,7 +616,7 @@ export default function DigitalLaw() {
                         ) : (
                           <Bookmark className="h-4 w-4 mr-2" />
                         )}
-                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
+                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'L��u để học sau'}
                       </Button>
                     </div>
                   </CardContent>
@@ -818,12 +818,13 @@ export default function DigitalLaw() {
       {/* Detailed Rule View Modal */}
       {selectedRule && (
         <div
-          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 overflow-y-auto"
           onClick={hideRuleDetails}
         >
           <div
-            className="bg-white rounded-2xl max-w-5xl w-full max-h-[95vh] overflow-y-auto shadow-2xl"
+            className="bg-white rounded-2xl max-w-4xl w-full my-8 shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
+            style={{ maxHeight: 'calc(100vh - 4rem)' }}
           >
             {(() => {
               const rule = legalRules.find(r => r.id === selectedRule);
