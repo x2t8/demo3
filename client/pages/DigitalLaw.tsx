@@ -188,7 +188,7 @@ export default function DigitalLaw() {
       impact: "Môi trường lành mạnh",
       usage: "Mạng xã hội, website",
       description:
-        "Nội dung đăng tải phải tuân thủ luật pháp Việt Nam, không vi phạm đạo đức xã h��i và quy định nền tảng.",
+        "Nội dung đăng tải phải tuân thủ luật pháp Việt Nam, không vi phạm đạo đức xã hội và quy định nền tảng.",
       dos: [
         "Ki���m tra tính chính xác thông tin",
         "Tôn trọng các giá trị xã hội",
@@ -203,7 +203,7 @@ export default function DigitalLaw() {
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
-        "Chia sẻ nội dung khiêu dâm",
+        "Chia sẻ nội dung khiêu d��m",
       ],
     },
     {
@@ -685,7 +685,7 @@ export default function DigitalLaw() {
                 Cùng Xây Dựng Không Gian Số Hợp Pháp!
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Hiểu biết pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
+                Hiểu biết pháp luật giúp bạn sáng t��o tự do và bảo vệ quyền lợi 
                 của bản thân cũng như người khác
               </p>
               <div className="flex justify-center">
@@ -769,7 +769,7 @@ export default function DigitalLaw() {
 
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
-              ⚖️ Quy định pháp lý chi tiết
+              ⚖️ Quy định ph��p lý chi tiết
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               6 lĩnh vực pháp lý quan trọng khi hoạt động số
@@ -841,7 +841,7 @@ export default function DigitalLaw() {
               if (!rule) return null;
 
               return (
-                <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 4rem)' }}>
+                <div className="flex flex-col h-full">
                   {/* Header */}
                   <div className={`bg-gradient-to-r ${rule.gradient} text-white p-6 rounded-t-2xl relative overflow-hidden`}>
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
