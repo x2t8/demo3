@@ -68,6 +68,13 @@ export default function DigitalLaw() {
     });
   }, []);
 
+  // Cleanup body scroll on unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   const toggleBookmark = (itemId: string) => {
     setBookmarkedItems((prev) =>
       prev.includes(itemId)
@@ -170,7 +177,7 @@ export default function DigitalLaw() {
       donts: [
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
-        "Sử dụng sai mục đích đã khai báo",
+        "Sử dụng sai m��c đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
@@ -232,7 +239,7 @@ export default function DigitalLaw() {
         "Spam tin nhắn, bình luận",
         "Harassment, cyberbullying",
         "Chia sẻ link độc hại",
-        "Livestream nội dung vi phạm",
+        "Livestream n���i dung vi phạm",
         "Mua bán tài khoản, like, follow",
       ],
     },
@@ -348,7 +355,7 @@ export default function DigitalLaw() {
                       75 triệu
                     </div>
                     <div className="text-sm opacity-80">
-                      Mức phạt tối đa VNĐ
+                      Mức ph��t tối đa VNĐ
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
@@ -483,7 +490,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Hệ thống license cho phép chia sẻ có điều kiện
+                  Hệ th���ng license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Các mức ��ộ từ attribution đến no derivatives
