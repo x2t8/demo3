@@ -139,7 +139,7 @@ export default function DigitalLaw() {
       dos: [
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
-        "Tạo nội dung gốc của riêng mình",
+        "Tạo n��i dung gốc của riêng mình",
         "Trích dẫn nguồn rõ ràng khi cần",
         "Mua license khi sử dụng thư��ng mại",
         "Tôn trọng quyền moral của tác giả",
@@ -169,7 +169,7 @@ export default function DigitalLaw() {
       dos: [
         "Xin đồng ý trước khi thu thập dữ liệu",
         "Giải thích rõ mục đích sử dụng",
-        "Bảo mật dữ liệu thu thập được",
+        "Bảo mật d�� liệu thu thập được",
         "Cho phép người dùng chỉnh sửa/xóa",
         "Thông báo khi có rò rỉ dữ li��u",
         "Tuân thủ quyền được quên",
@@ -424,7 +424,7 @@ export default function DigitalLaw() {
               Khái Niệm Pháp Lý Cơ Bản
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đ�����i số
+              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đ���i số
             </p>
           </div>
 
@@ -843,13 +843,11 @@ export default function DigitalLaw() {
           }}
         >
           <div
-            className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl relative overflow-hidden"
+            className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
             style={{
               maxHeight: 'calc(100vh - 8rem)',
-              position: 'relative',
-              top: '0',
-              transform: 'none'
+              margin: 'auto'
             }}
           >
             {(() => {
