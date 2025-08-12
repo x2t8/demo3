@@ -51,7 +51,15 @@ export default function DigitalLaw() {
   const [bookmarkedItems, setBookmarkedItems] = useState<string[]>([]);
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
 
-  useScrollReveal();
+  // Simple animation for legal rules when component mounts
+  useEffect(() => {
+    const cards = document.querySelectorAll('.legal-rule-card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('animate-in');
+      }, index * 150);
+    });
+  }, []);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const scrollRef = useScrollReveal();
 
@@ -164,7 +172,7 @@ export default function DigitalLaw() {
       impact: "An toàn thông tin",
       usage: "Mọi hoạt động số",
       description:
-        "Luật Bảo vệ dữ liệu cá nhân quy định nghiêm ngặt về việc thu thập, xử lý và sử dụng thông tin cá nhân.",
+        "Luật Bảo vệ d�� liệu cá nhân quy định nghiêm ngặt về việc thu thập, xử lý và sử dụng thông tin cá nhân.",
       dos: [
         "Xin đồng ý trước khi thu thập dữ liệu",
         "Giải thích rõ mục đích sử dụng",
@@ -177,7 +185,7 @@ export default function DigitalLaw() {
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
-        "Lưu trữ dữ liệu quá thời h��n",
+        "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
@@ -392,7 +400,7 @@ export default function DigitalLaw() {
                         <div className="text-center">
                           <Copyright className="h-12 w-12 mx-auto mb-3 text-white" />
                           <div className="text-lg font-bold text-white">Bản Quyền</div>
-                          <div className="text-sm opacity-90 text-white">Sở hữu trí tuệ</div>
+                          <div className="text-sm opacity-90 text-white">Sở hữu trí tu��</div>
                         </div>
                       </Button>
                     </div>
@@ -635,7 +643,7 @@ export default function DigitalLaw() {
               📊 Thống Kê Pháp Lý Toàn Cầu
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những con số cho thấy tầm quan trọng c��a tuân thủ pháp luật số
+              Những con số cho thấy tầm quan trọng của tuân thủ pháp luật số
             </p>
           </div>
 
