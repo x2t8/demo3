@@ -367,7 +367,7 @@ export default function DigitalLaw() {
                   <div className="relative inline-block">
                     <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-110 hover:rotate-3 transition-all duration-500 animate-gentle-wave" />
                     
-                    {/* Bên trái cân: Pháp luật số - TO HƠN */}
+                    {/* Bên trái cân: Ph��p luật số - TO HƠN */}
                     <div className="absolute -left-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -509,7 +509,7 @@ export default function DigitalLaw() {
             {/* LAYOUT MỚI: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
               {legalRules.map((rule, index) => (
-                <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group">
+                <Card key={rule.id} className="h-full hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 border-0 group hover:rotate-1 transform-gpu animate-card-stack">
                   <CardHeader className={`bg-gradient-to-r ${rule.gradient} text-white rounded-t-lg relative overflow-hidden`}>
                     {/* Decorative background */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
