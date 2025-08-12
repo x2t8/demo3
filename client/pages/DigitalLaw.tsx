@@ -176,7 +176,7 @@ export default function DigitalLaw() {
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
-        "Không bảo mật dữ liệu ��úng cách",
+        "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
     },
@@ -476,7 +476,7 @@ export default function DigitalLaw() {
 
             <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Lock className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Lock className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Creative Commons</CardTitle>
               </CardHeader>
               <CardContent>
