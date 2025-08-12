@@ -50,6 +50,20 @@ import DisclaimerBanner from "@/components/DisclaimerBanner";
 export default function DigitalLaw() {
   const [bookmarkedItems, setBookmarkedItems] = useState<string[]>([]);
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const scrollRef = useScrollReveal();
+
+  useStaggeredReveal(150);
+
+  useEffect(() => {
+    // Add entrance animations to page elements
+    const elements = document.querySelectorAll('.animate-entrance');
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('opacity-100', 'translate-y-0');
+      }, index * 100);
+    });
+  }, []);
 
   const toggleBookmark = (itemId: string) => {
     setBookmarkedItems((prev) =>
@@ -179,7 +193,7 @@ export default function DigitalLaw() {
       donts: [
         "Đăng tin giả, tin đồn thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
-        "Kích động bạo lực, thù hận",
+        "Kích đ���ng bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
         "Chia sẻ nội dung khiêu dâm",
@@ -210,7 +224,7 @@ export default function DigitalLaw() {
         "Tạo tài khoản giả mạo",
         "Spam tin nhắn, bình luận",
         "Harassment, cyberbullying",
-        "Chia sẻ link độc hại",
+        "Chia sẻ link đ��c hại",
         "Livestream nội dung vi phạm",
         "Mua bán tài khoản, like, follow",
       ],
@@ -233,7 +247,7 @@ export default function DigitalLaw() {
         "Khai báo và nộp thuế đúng quy định",
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
-        "Bảo vệ thông tin kh��ch hàng",
+        "Bảo vệ thông tin khách hàng",
         "Tuân thủ quy định về quảng cáo",
       ],
       donts: [
