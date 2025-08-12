@@ -208,7 +208,7 @@ export default function DigitalLaw() {
         "Đăng tin giả, tin đồn thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
-        "Quảng cáo sản ph���m trái phép",
+        "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
         "Chia sẻ nội dung khiêu dâm",
       ],
@@ -422,7 +422,7 @@ export default function DigitalLaw() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
@@ -487,7 +487,7 @@ export default function DigitalLaw() {
                   Hệ thống license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
-                  Các mức ��ộ t��� attribution đến no derivatives
+                  Các mức ��ộ từ attribution đến no derivatives
                 </Badge>
                 <div className="text-xs text-gray-500">
                   VD: Wikipedia, Unsplash
@@ -920,7 +920,7 @@ export default function DigitalLaw() {
                         ) : (
                           <Bookmark className="h-4 w-4 mr-2" />
                         )}
-                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
+                        {bookmarkedItems.includes(rule.id) ? 'Đã l��u' : 'Lưu để học sau'}
                       </Button>
                       <Button variant="outline" onClick={hideRuleDetails}>
                         <ArrowLeft className="h-4 w-4 mr-2" />
