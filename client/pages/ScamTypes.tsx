@@ -185,7 +185,7 @@ export default function ScamTypes() {
         "Máy POS giả",
       ],
       prevention: [
-        "Che tay khi nhập mã PIN",
+        "Che tay khi nhập m�� PIN",
         "Kiểm tra ATM trước khi sử dụng",
         "Theo dõi giao dịch thường xuyên",
         "Báo ngay khi phát hiện bất thường",
@@ -201,7 +201,7 @@ export default function ScamTypes() {
       {/* Desktop/Tablet: New Layout theo hình */}
       <div className="hidden md:block">
         {/* Hero Section - Layout như DigitalEthics */}
-        <section className="bg-gradient-to-br from-red-500 via-orange-500 to-red-600 relative overflow-hidden py-16 lg:py-20">
+        <section className="bg-gradient-to-br from-red-400 via-pink-400 to-red-500 relative overflow-hidden py-16 lg:py-20">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
           </div>
@@ -243,13 +243,16 @@ export default function ScamTypes() {
                   </div>
                   <div className="text-center">
                     <div className="text-2xl lg:text-3xl font-bold">68%</div>
-                    <div className="text-sm opacity-80">Qua điện thoại</div>
+                    <div className="text-sm opacity-80">Qua đi��n thoại</div>
                   </div>
                 </div>
               </div>
 
-              {/* Right side - Cards */}
-              <div className="grid grid-cols-2 gap-4">
+              {/* Right side - Cards - Zigzag Layout */}
+              <div className="space-y-6">
+                {/* Row 1 - Offset right */}
+                <div className="grid grid-cols-2 gap-4 ml-8">
+                  <div></div> {/* Empty space */}
                 {[
                   {
                     icon: Phone,
@@ -283,8 +286,8 @@ export default function ScamTypes() {
                     color: "bg-white/70",
                     textColor: "text-red-700"
                   }
-                ].map((item, index) => (
-                  <Card key={index} className={`${item.color} border-0 hover:scale-105 transition-transform duration-300 cursor-pointer`}>
+                ].slice(0, 1).map((item, index) => (
+                  <Card key={index} className={`${item.color} border-0 hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg`}>
                     <CardContent className="p-4">
                       <div className="flex items-center gap-3 mb-3">
                         <div className={`w-10 h-10 ${item.textColor === 'text-red-600' ? 'bg-red-100' : item.textColor === 'text-orange-600' ? 'bg-orange-100' : item.textColor === 'text-yellow-600' ? 'bg-yellow-100' : 'bg-blue-100'} rounded-lg flex items-center justify-center`}>
@@ -314,6 +317,97 @@ export default function ScamTypes() {
                     </CardContent>
                   </Card>
                 ))}
+                </div>
+
+                {/* Row 2 - Offset left */}
+                <div className="grid grid-cols-2 gap-4 mr-8">
+                  {[
+                    {
+                      icon: MessageSquare,
+                      title: "Lừa đảo SMS",
+                      subtitle: "Link độc hại",
+                      value: "78%",
+                      color: "bg-white/90",
+                      textColor: "text-orange-600"
+                    },
+                    {
+                      icon: Mail,
+                      title: "Lừa đảo Email",
+                      subtitle: "Phishing tài khoản",
+                      value: "65%",
+                      color: "bg-white/80",
+                      textColor: "text-yellow-600"
+                    }
+                  ].map((item, index) => (
+                    <Card key={index + 1} className={`${item.color} border-0 hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg`}>
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className={`w-10 h-10 ${item.textColor === 'text-orange-600' ? 'bg-orange-100' : 'bg-yellow-100'} rounded-lg flex items-center justify-center`}>
+                            <item.icon className={`h-5 w-5 ${item.textColor}`} />
+                          </div>
+                        </div>
+                        <h3 className="font-bold text-gray-900 text-sm mb-1">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 text-xs mb-2">
+                          {item.subtitle}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-gray-500">Tỷ lệ gặp</span>
+                          <span className={`font-bold text-sm ${item.textColor}`}>{item.value}</span>
+                        </div>
+                        <div className="mt-2 w-full bg-gray-200 rounded-full h-1.5">
+                          <div
+                            className={`h-1.5 rounded-full transition-all duration-1000 ${
+                              item.textColor === 'text-orange-600' ? 'bg-orange-500' : 'bg-yellow-500'
+                            }`}
+                            style={{ width: item.value }}
+                          ></div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+
+                {/* Row 3 - Center */}
+                <div className="flex justify-center">
+                  {[
+                    {
+                      icon: CreditCard,
+                      title: "Lừa đảo thẻ",
+                      subtitle: "Sao chép thông tin",
+                      value: "45%",
+                      color: "bg-white/70",
+                      textColor: "text-red-700"
+                    }
+                  ].map((item, index) => (
+                    <Card key={index + 3} className={`${item.color} border-0 hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg w-64`}>
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <item.icon className={`h-5 w-5 ${item.textColor}`} />
+                          </div>
+                        </div>
+                        <h3 className="font-bold text-gray-900 text-sm mb-1">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 text-xs mb-2">
+                          {item.subtitle}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-gray-500">Tỷ lệ gặp</span>
+                          <span className={`font-bold text-sm ${item.textColor}`}>{item.value}</span>
+                        </div>
+                        <div className="mt-2 w-full bg-gray-200 rounded-full h-1.5">
+                          <div
+                            className="h-1.5 rounded-full transition-all duration-1000 bg-blue-500"
+                            style={{ width: item.value }}
+                          ></div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
