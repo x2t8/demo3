@@ -116,7 +116,7 @@ export default function DigitalLaw() {
     },
     {
       value: "150 triệu",
-      label: "Mức phạt tối đa tổ chức",
+      label: "Mức phạt t���i đa tổ chức",
       color: "from-orange-500 to-orange-600",
       description: "VNĐ tại Việt Nam",
     },
@@ -177,8 +177,8 @@ export default function DigitalLaw() {
       donts: [
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
-        "Sử dụng sai mục đích đã khai b��o",
-        "Lưu trữ dữ liệu quá thời hạn",
+        "Sử dụng sai mục đích đã khai báo",
+        "Lưu tr�� dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
@@ -479,7 +479,7 @@ export default function DigitalLaw() {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Lock className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                <Lock className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Creative Commons</CardTitle>
               </CardHeader>
               <CardContent>
