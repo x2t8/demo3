@@ -48,6 +48,7 @@ import DisclaimerBanner from "@/components/DisclaimerBanner";
 
 export default function DigitalLaw() {
   const [bookmarkedItems, setBookmarkedItems] = useState<string[]>([]);
+  const [selectedRule, setSelectedRule] = useState<string | null>(null);
 
   const toggleBookmark = (itemId: string) => {
     setBookmarkedItems((prev) =>
@@ -55,6 +56,14 @@ export default function DigitalLaw() {
         ? prev.filter((id) => id !== itemId)
         : [...prev, itemId],
     );
+  };
+
+  const showRuleDetails = (ruleId: string) => {
+    setSelectedRule(ruleId);
+  };
+
+  const hideRuleDetails = () => {
+    setSelectedRule(null);
   };
 
   const digitalLawStats = [
@@ -292,7 +301,7 @@ export default function DigitalLaw() {
                 </div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                   Pháp Luật Số &{" "}
-                  <span className="text-yellow-300">Bản Quyền</span>
+                  <span className="text-yellow-300">B��n Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
