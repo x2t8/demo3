@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useScrollReveal, useStaggeredReveal } from "@/hooks/useScrollReveal";
 import {
   Scale,
   Copyright,
@@ -49,6 +51,20 @@ import DisclaimerBanner from "@/components/DisclaimerBanner";
 export default function DigitalLaw() {
   const [bookmarkedItems, setBookmarkedItems] = useState<string[]>([]);
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const scrollRef = useScrollReveal();
+
+  useStaggeredReveal(150);
+
+  useEffect(() => {
+    // Add entrance animations to page elements
+    const elements = document.querySelectorAll('.animate-entrance');
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('opacity-100', 'translate-y-0');
+      }, index * 100);
+    });
+  }, []);
 
   const toggleBookmark = (itemId: string) => {
     setBookmarkedItems((prev) =>
@@ -60,10 +76,21 @@ export default function DigitalLaw() {
 
   const showRuleDetails = (ruleId: string) => {
     setSelectedRule(ruleId);
+    setIsModalVisible(true);
+    // Add delay for modal animation
+    setTimeout(() => {
+      const modal = document.querySelector('.modal-content');
+      modal?.classList.add('animate-modal-in');
+    }, 50);
   };
 
   const hideRuleDetails = () => {
-    setSelectedRule(null);
+    const modal = document.querySelector('.modal-content');
+    modal?.classList.add('animate-modal-out');
+    setTimeout(() => {
+      setSelectedRule(null);
+      setIsModalVisible(false);
+    }, 300);
   };
 
   const digitalLawStats = [
@@ -286,30 +313,30 @@ export default function DigitalLaw() {
       {/* =================================== */}
       <div className="hidden lg:block">
         {/* Hero Section - Desktop */}
-        <div className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden">
+        <div className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden animate-entrance opacity-0 translate-y-8 transition-all duration-1000">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="flex items-center mb-6">
-                  <Scale className="h-12 w-12 mr-4 animate-pulse" />
+                <div className="flex items-center mb-6 animate-entrance opacity-0 translate-y-4 transition-all duration-700 delay-300">
+                  <Scale className="h-12 w-12 mr-4 animate-pulse hover:animate-spin transition-transform" />
                   <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     CÔNG LÝ VÀ PHÁP QUYỀN
                   </span>
                 </div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-entrance opacity-0 translate-y-6 transition-all duration-800 delay-500">
                   Pháp Luật Số &{" "}
-                  <span className="text-yellow-300">Bản Quyền</span>
+                  <span className="text-yellow-300 animate-text-breathe">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
                   một cách hợp pháp trong thời đ���i số.
                 </p>
-                <div className="flex items-center space-x-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-300">
+                <div className="flex items-center space-x-6 animate-entrance opacity-0 translate-y-4 transition-all duration-900 delay-1000 stagger-children">
+                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
                       89%
                     </div>
                     <div className="text-sm opacity-80">
@@ -317,8 +344,8 @@ export default function DigitalLaw() {
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-300">
+                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
                       75 triệu
                     </div>
                     <div className="text-sm opacity-80">
@@ -326,8 +353,8 @@ export default function DigitalLaw() {
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-300">
+                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
                       2.1 tỷ
                     </div>
                     <div className="text-sm opacity-80">USD thiệt hại/năm</div>
@@ -336,10 +363,10 @@ export default function DigitalLaw() {
               </div>
 
               <div className="relative">
-                {/* Bi���u tượng cân công lý lớn làm button */}
+                {/* Bi���u tượng cân công lý lớn l��m button */}
                 <div className="text-center">
                   <div className="relative inline-block">
-                    <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-105 transition-transform duration-300" />
+                    <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-110 hover:rotate-3 transition-all duration-500 animate-gentle-wave" />
                     
                     {/* Bên trái cân: Pháp luật số - TO HƠN */}
                     <div className="absolute -left-24 top-12">
@@ -383,7 +410,7 @@ export default function DigitalLaw() {
         </div>
 
         {/* Legal Concepts Overview */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-reveal">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Khái Niệm Pháp Lý Cơ Bản
@@ -393,10 +420,10 @@ export default function DigitalLaw() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Bản quyền (Copyright)</CardTitle>
               </CardHeader>
               <CardContent>
@@ -412,9 +439,9 @@ export default function DigitalLaw() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Sở hữu trí tuệ</CardTitle>
               </CardHeader>
               <CardContent>
@@ -430,9 +457,9 @@ export default function DigitalLaw() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Fair Use/Sử dụng hợp lý</CardTitle>
               </CardHeader>
               <CardContent>
@@ -448,9 +475,9 @@ export default function DigitalLaw() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Lock className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Lock className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Creative Commons</CardTitle>
               </CardHeader>
               <CardContent>
@@ -458,7 +485,7 @@ export default function DigitalLaw() {
                   Hệ thống license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
-                  Các mức độ từ attribution đến no derivatives
+                  Các mức ��ộ từ attribution đến no derivatives
                 </Badge>
                 <div className="text-xs text-gray-500">
                   VD: Wikipedia, Unsplash
@@ -469,7 +496,7 @@ export default function DigitalLaw() {
         </div>
 
         {/* Legal Rules - THIẾT KẾ MỚI (khác với 2 trang kia) */}
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 py-20">
+        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 py-20 scroll-reveal">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -481,16 +508,16 @@ export default function DigitalLaw() {
             </div>
 
             {/* LAYOUT MỚI: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
               {legalRules.map((rule, index) => (
-                <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group">
+                <Card key={rule.id} className="h-full hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 border-0 group hover:rotate-1 transform-gpu animate-card-stack">
                   <CardHeader className={`bg-gradient-to-r ${rule.gradient} text-white rounded-t-lg relative overflow-hidden`}>
                     {/* Decorative background */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
                     
                     <div className="relative flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                           <rule.icon className="h-6 w-6 text-white" />
                         </div>
                         <div>
@@ -569,7 +596,7 @@ export default function DigitalLaw() {
                       <Button
                         size="sm"
                         variant="outline"
-                        className="w-full"
+                        className="w-full hover:scale-105 transition-all duration-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50"
                         onClick={() => showRuleDetails(rule.id)}
                       >
                         <Eye className="h-4 w-4 mr-2" />
@@ -745,7 +772,7 @@ export default function DigitalLaw() {
             {legalRules.map((rule, index) => (
               <Card
                 key={rule.id}
-                className="cursor-pointer transition-all duration-200 border-l-4 hover:shadow-lg"
+                className="cursor-pointer transition-all duration-300 border-l-4 hover:shadow-xl hover:-translate-y-1 hover:scale-105 active:scale-95"
                 style={{ borderLeftColor: rule.gradient.includes('purple') ? '#8b5cf6' :
                          rule.gradient.includes('blue') ? '#3b82f6' :
                          rule.gradient.includes('green') ? '#10b981' :
@@ -755,8 +782,8 @@ export default function DigitalLaw() {
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${rule.gradient} flex items-center justify-center shadow-sm`}>
-                      <rule.icon className="h-8 w-8 text-white" />
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${rule.gradient} flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300`}>
+                      <rule.icon className="h-8 w-8 text-white animate-icon-float" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-bold text-gray-900 text-lg leading-tight mb-2">
@@ -786,8 +813,8 @@ export default function DigitalLaw() {
 
       {/* Detailed Rule View Modal */}
       {selectedRule && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto modal-content transform scale-95 opacity-0 transition-all duration-300">
             {(() => {
               const rule = legalRules.find(r => r.id === selectedRule);
               if (!rule) return null;
