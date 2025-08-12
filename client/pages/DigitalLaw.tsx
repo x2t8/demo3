@@ -858,25 +858,27 @@ export default function DigitalLaw() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-8">
-                    <p className="text-lg text-gray-700 mb-8 leading-relaxed">{rule.description}</p>
+                  <div className="p-6">
+                    <p className="text-base text-gray-700 mb-6 leading-relaxed">{rule.description}</p>
 
-                    {/* Stats */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                      <div className="bg-gray-50 rounded-lg p-4 text-center">
-                        <TrendingUp className="h-6 w-6 text-gray-400 mx-auto mb-2" />
-                        <div className="text-sm text-gray-500">Tác động</div>
-                        <div className="font-semibold">{rule.impact}</div>
-                      </div>
-                      <div className="bg-gray-50 rounded-lg p-4 text-center">
-                        <Globe className="h-6 w-6 text-gray-400 mx-auto mb-2" />
-                        <div className="text-sm text-gray-500">Phạm vi áp dụng</div>
-                        <div className="font-semibold">{rule.usage}</div>
-                      </div>
-                      <div className="bg-gray-50 rounded-lg p-4 text-center">
-                        <Target className="h-6 w-6 text-gray-400 mx-auto mb-2" />
-                        <div className="text-sm text-gray-500">Mức độ quan trọng</div>
-                        <div className="font-semibold">{rule.importanceLevel}%</div>
+                    {/* Stats - Compact Design */}
+                    <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl p-4 mb-6">
+                      <div className="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                          <TrendingUp className="h-5 w-5 text-indigo-500 mx-auto mb-1" />
+                          <div className="text-xs text-gray-500">Tác động</div>
+                          <div className="font-semibold text-sm">{rule.impact}</div>
+                        </div>
+                        <div>
+                          <Globe className="h-5 w-5 text-blue-500 mx-auto mb-1" />
+                          <div className="text-xs text-gray-500">Phạm vi</div>
+                          <div className="font-semibold text-sm">{rule.usage}</div>
+                        </div>
+                        <div>
+                          <Target className="h-5 w-5 text-purple-500 mx-auto mb-1" />
+                          <div className="text-xs text-gray-500">Quan trọng</div>
+                          <div className="font-semibold text-sm">{rule.importanceLevel}%</div>
+                        </div>
                       </div>
                     </div>
 
