@@ -60,20 +60,6 @@ export default function DigitalLaw() {
       }, index * 150);
     });
   }, []);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const scrollRef = useScrollReveal();
-
-  useStaggeredReveal(150);
-
-  useEffect(() => {
-    // Add entrance animations to page elements
-    const elements = document.querySelectorAll('.animate-entrance');
-    elements.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.add('opacity-100', 'translate-y-0');
-      }, index * 100);
-    });
-  }, []);
 
   const toggleBookmark = (itemId: string) => {
     setBookmarkedItems((prev) =>
@@ -136,7 +122,7 @@ export default function DigitalLaw() {
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
         "Tạo nội dung gốc của riêng mình",
-        "Trích dẫn nguồn rõ ràng khi cần",
+        "Trích dẫn nguồn rõ r��ng khi cần",
         "Mua license khi sử dụng thư��ng mại",
         "Tôn trọng quyền moral của tác giả",
       ],
