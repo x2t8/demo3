@@ -115,7 +115,7 @@ export default function DigitalLaw() {
       value: "150 triệu",
       label: "Mức phạt tối đa tổ chức",
       color: "from-orange-500 to-orange-600",
-      description: "VNĐ tại Việt Nam",
+      description: "VNĐ tại Vi���t Nam",
     },
   ];
 
@@ -236,7 +236,7 @@ export default function DigitalLaw() {
         "Spam tin nhắn, bình luận",
         "Harassment, cyberbullying",
         "Chia sẻ link độc hại",
-        "Livestream n��i dung vi phạm",
+        "Livestream nội dung vi phạm",
         "Mua bán tài khoản, like, follow",
       ],
     },
@@ -419,7 +419,7 @@ export default function DigitalLaw() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
@@ -502,7 +502,7 @@ export default function DigitalLaw() {
                 📋 Quy Định Pháp Lý Chi Tiết
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Hướng dẫn chi tiết về các quy định pháp lý trong ho��t động số
+                Hướng dẫn chi tiết về các quy định pháp lý trong hoạt động số
               </p>
             </div>
 
@@ -889,7 +889,7 @@ export default function DigitalLaw() {
                       <div>
                         <div className="flex items-center space-x-2 mb-4">
                           <XCircle className="h-6 w-6 text-red-500" />
-                          <h3 className="text-xl font-bold text-red-700">Kh��ng nên làm</h3>
+                          <h3 className="text-xl font-bold text-red-700">Không nên làm</h3>
                         </div>
                         <div className="space-y-3">
                           {rule.donts.map((item, idx) => (
