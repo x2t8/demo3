@@ -124,7 +124,7 @@ export default function DigitalLaw() {
       impact: "Bảo vệ sáng tạo",
       usage: "Mọi tác phẩm số",
       description:
-        "Bản quyền bảo vệ quyền c���a tác giả đối với tác phẩm sáng tạo, bao gồm văn bản, hình ảnh, âm nhạc và video.",
+        "Bản quyền bảo vệ quyền của tác giả đối với tác phẩm sáng tạo, bao gồm văn bản, hình ảnh, âm nhạc và video.",
       dos: [
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
@@ -626,38 +626,49 @@ export default function DigitalLaw() {
           </div>
         </div>
 
-        {/* Legal Statistics Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              📊 Thống Kê Pháp Lý Toàn Cầu
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những con số cho thấy tầm quan trọng của tuân thủ pháp luật số
-            </p>
-          </div>
+        {/* Legal Impact Numbers */}
+        <div className="bg-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                🎯 Tác Động Pháp Lý Trong Thời Đại Số
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Những con số thực tế về vi phạm và tổn thất từ việc không tuân thủ luật
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {digitalLawStats.map((stat, index) => (
-              <Card
-                key={index}
-                className="text-center hover:shadow-lg transition-shadow"
-              >
-                <CardContent className="p-6">
-                  <div
-                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center`}
-                  >
-                    <span className="text-2xl font-bold text-white">
-                      {stat.value}
-                    </span>
+            {/* Stats in horizontal layout */}
+            <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-8 shadow-sm border">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                {digitalLawStats.map((stat, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="mb-4">
+                      <div className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                        {stat.value}
+                      </div>
+                      <h3 className="font-semibold text-gray-900 text-sm md:text-base leading-tight">
+                        {stat.label}
+                      </h3>
+                    </div>
+                    <div className="text-xs text-gray-500 border-t pt-3">
+                      {stat.description}
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900">
-                    {stat.label}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{stat.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom insight */}
+            <div className="mt-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white text-center">
+              <div className="flex items-center justify-center mb-3">
+                <AlertTriangle className="h-6 w-6 mr-2" />
+                <span className="font-semibold">Thông tin quan trọng</span>
+              </div>
+              <p className="text-indigo-100">
+                89% vi phạm bản quyền xảy ra do thiếu hiểu biết pháp luật, không phải cố ý làm sai
+              </p>
+            </div>
           </div>
         </div>
 
