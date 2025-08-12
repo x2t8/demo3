@@ -512,7 +512,7 @@ export default function DigitalLaw() {
             {/* LAYOUT MỚI: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
               {legalRules.map((rule, index) => (
-                <Card key={rule.id} className="h-full hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 border-0 group hover:rotate-1 transform-gpu animate-card-stack">
+                <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group scroll-reveal">
                   <CardHeader className={`bg-gradient-to-r ${rule.gradient} text-white rounded-t-lg relative overflow-hidden`}>
                     {/* Decorative background */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
@@ -748,7 +748,7 @@ export default function DigitalLaw() {
               </Card>
               <Card className="p-4 text-center">
                 <Shield className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
-                <div className="text-sm font-semibold">Sở hữu trí tuệ</div>
+                <div className="text-sm font-semibold">Sở h��u trí tuệ</div>
               </Card>
               <Card className="p-4 text-center">
                 <Users className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
