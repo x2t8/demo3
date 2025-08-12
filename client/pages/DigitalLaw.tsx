@@ -207,7 +207,7 @@ export default function DigitalLaw() {
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
-        "Chia sẻ nội dung khi��u dâm",
+        "Chia sẻ nội dung khiêu dâm",
       ],
     },
     {
@@ -334,8 +334,8 @@ export default function DigitalLaw() {
                   một cách hợp pháp trong thời đ���i số.
                 </p>
                 <div className="flex items-center space-x-6 animate-entrance opacity-0 translate-y-4 transition-all duration-900 delay-1000 stagger-children">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-300">
+                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
                       89%
                     </div>
                     <div className="text-sm opacity-80">
@@ -427,7 +427,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Quyền độc quyền của tác giả đối với t��c phẩm do mình sáng tạo
+                  Quyền độc quyền của tác giả đối với tác phẩm do mình sáng tạo
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Tự động có từ khi tác phẩm được tạo ra, không cần đăng ký
