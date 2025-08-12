@@ -771,7 +771,7 @@ export default function DigitalLaw() {
             {legalRules.map((rule, index) => (
               <Card
                 key={rule.id}
-                className="cursor-pointer transition-all duration-200 border-l-4 hover:shadow-lg"
+                className="cursor-pointer transition-all duration-300 border-l-4 hover:shadow-xl hover:-translate-y-1 hover:scale-105 active:scale-95"
                 style={{ borderLeftColor: rule.gradient.includes('purple') ? '#8b5cf6' :
                          rule.gradient.includes('blue') ? '#3b82f6' :
                          rule.gradient.includes('green') ? '#10b981' :
