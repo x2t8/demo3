@@ -76,7 +76,7 @@ export default function ScamTypes() {
       value: "68%",
       label: "Qua điện thoại & SMS",
       color: "from-purple-500 to-purple-600",
-      description: "Hình thức phổ bi���n nhất",
+      description: "Hình thức phổ biến nhất",
     },
     {
       value: "25-45",
@@ -200,43 +200,127 @@ export default function ScamTypes() {
 
       {/* Desktop/Tablet: New Layout theo hình */}
       <div className="hidden md:block">
-        {/* Hero Section */}
-        <section className="px-4 py-16 lg:py-20 bg-gradient-to-br from-red-500 via-orange-500 to-red-600 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="container mx-auto relative z-10">
-            <div className="text-center text-white mb-12">
-              <div className="mb-6">
-                <AlertTriangle className="h-12 w-12 lg:h-16 lg:w-16 mx-auto mb-4 text-white" />
-                <div className="bg-white/20 backdrop-blur-md rounded-lg px-4 py-2 inline-block">
-                  <span className="text-sm font-medium">CẢNH BÁO QUAN TRỌNG</span>
+        {/* Hero Section - Layout như DigitalEthics */}
+        <section className="bg-gradient-to-br from-red-500 via-orange-500 to-red-600 relative overflow-hidden py-16 lg:py-20">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left side - Content */}
+              <div className="text-white space-y-6">
+                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-2">
+                  <Shield className="h-5 w-5" />
+                  <span className="text-sm font-medium">BẢO VỆ AN TOÀN SỐ</span>
+                </div>
+
+                <div className="space-y-4">
+                  <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                    An Toàn Số &
+                    <span className="text-yellow-300 block">
+                      Phòng Chống
+                    </span>
+                    <span className="text-yellow-300">
+                      Lừa Đảo
+                    </span>
+                  </h1>
+
+                  <p className="text-lg lg:text-xl opacity-90 leading-relaxed max-w-lg">
+                    Học cách nhận biết, phòng tránh và bảo vệ bản thân khỏi các hình thức lừa đảo trực tuyến trong thời đại số hiện đại.
+                  </p>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-6 pt-6">
+                  <div className="text-center">
+                    <div className="text-2xl lg:text-3xl font-bold">15K+</div>
+                    <div className="text-sm opacity-80">Vụ lừa đảo online</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl lg:text-3xl font-bold">2.5K tỷ</div>
+                    <div className="text-sm opacity-80">Thiệt hại/năm</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl lg:text-3xl font-bold">68%</div>
+                    <div className="text-sm opacity-80">Qua điện thoại</div>
+                  </div>
                 </div>
               </div>
-              <h1 className="text-3xl lg:text-5xl font-bold mb-4">
-                Các Dạng Lừa Đảo Chi Tiết
-              </h1>
-              <p className="text-lg lg:text-xl opacity-95 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Phân tích sâu từng loại lừa đảo với dữ liệu thực tế, thống kê cập nhật và hướng dẫn phòng tránh hiệu quả nhất.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6 text-lg">
-                <div className="bg-white/20 backdrop-blur-md rounded-xl px-6 py-3">
-                  <span className="font-bold">15K+</span>
-                  <span className="ml-2">vụ/năm</span>
-                </div>
-                <div className="bg-white/20 backdrop-blur-md rounded-xl px-6 py-3">
-                  <span className="font-bold">2.5K tỷ</span>
-                  <span className="ml-2">thiệt hại</span>
-                </div>
-                <div className="bg-white/20 backdrop-blur-md rounded-xl px-6 py-3">
-                  <span className="font-bold">68%</span>
-                  <span className="ml-2">qua ĐT & SMS</span>
-                </div>
+
+              {/* Right side - Cards */}
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  {
+                    icon: Phone,
+                    title: "Lừa đảo điện thoại",
+                    subtitle: "Giả danh cơ quan",
+                    value: "92%",
+                    color: "bg-white",
+                    textColor: "text-red-600"
+                  },
+                  {
+                    icon: MessageSquare,
+                    title: "Lừa đảo SMS",
+                    subtitle: "Link độc hại",
+                    value: "78%",
+                    color: "bg-white/90",
+                    textColor: "text-orange-600"
+                  },
+                  {
+                    icon: Mail,
+                    title: "Lừa đảo Email",
+                    subtitle: "Phishing tài khoản",
+                    value: "65%",
+                    color: "bg-white/80",
+                    textColor: "text-yellow-600"
+                  },
+                  {
+                    icon: CreditCard,
+                    title: "Lừa đảo thẻ",
+                    subtitle: "Sao chép thông tin",
+                    value: "45%",
+                    color: "bg-white/70",
+                    textColor: "text-red-700"
+                  }
+                ].map((item, index) => (
+                  <Card key={index} className={`${item.color} border-0 hover:scale-105 transition-transform duration-300 cursor-pointer`}>
+                    <CardContent className="p-4">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className={`w-10 h-10 ${item.textColor === 'text-red-600' ? 'bg-red-100' : item.textColor === 'text-orange-600' ? 'bg-orange-100' : item.textColor === 'text-yellow-600' ? 'bg-yellow-100' : 'bg-blue-100'} rounded-lg flex items-center justify-center`}>
+                          <item.icon className={`h-5 w-5 ${item.textColor}`} />
+                        </div>
+                      </div>
+                      <h3 className="font-bold text-gray-900 text-sm mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-xs mb-2">
+                        {item.subtitle}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-gray-500">Tỷ lệ gặp</span>
+                        <span className={`font-bold text-sm ${item.textColor}`}>{item.value}</span>
+                      </div>
+                      <div className="mt-2 w-full bg-gray-200 rounded-full h-1.5">
+                        <div
+                          className={`h-1.5 rounded-full transition-all duration-1000 ${
+                            item.textColor === 'text-red-600' ? 'bg-red-500' :
+                            item.textColor === 'text-orange-600' ? 'bg-orange-500' :
+                            item.textColor === 'text-yellow-600' ? 'bg-yellow-500' : 'bg-blue-500'
+                          }`}
+                          style={{ width: item.value }}
+                        ></div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
         {/* Desktop Scam Cards - New Design */}
-        <section className="px-4 py-16 bg-white">
+        <section className="px-4 py-16 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-2xl font-bold text-center mb-3 text-gray-900">
               Phân loại chi tiết
@@ -646,7 +730,7 @@ export default function ScamTypes() {
                   title: "Lừa đảo đầu tư Forex",
                   type: "Mạng xã hội",
                   icon: TrendingUp,
-                  story: "Một người được bạn Zalo giới thiệu sàn đầu tư Forex với lãi su��t bất thường. Sau khi nạp tiền, họ không thể rút tiền và bị chặn liên lạc.",
+                  story: "Một người được bạn Zalo giới thiệu sàn đầu tư Forex với lãi suất bất thường. Sau khi nạp tiền, họ không thể rút tiền và bị chặn liên lạc.",
                   damage: "100 triệu VNĐ",
                   redFlags: [
                     "Lãi suất quá cao (30%/tháng)",
