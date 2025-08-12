@@ -158,7 +158,7 @@ export default function DigitalLaw() {
       importanceLevel: 96,
       color: "text-blue-600 bg-blue-100",
       gradient: "from-blue-500 to-cyan-500",
-      shortDesc: "Tuân thủ luật bảo vệ dữ liệu cá nhân",
+      shortDesc: "Tuân thủ luật bảo vệ dữ li���u cá nhân",
       impact: "An toàn thông tin",
       usage: "Mọi hoạt động số",
       description:
@@ -259,7 +259,7 @@ export default function DigitalLaw() {
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
         "Bảo vệ thông tin khách hàng",
-        "Tuân thủ quy định v�� quảng cáo",
+        "Tuân thủ quy định về quảng cáo",
       ],
       donts: [
         "Bán hàng giả, hàng nhái",
@@ -312,7 +312,7 @@ export default function DigitalLaw() {
       {/* =================================== */}
       <div className="hidden lg:block">
         {/* Hero Section - Desktop */}
-        <div className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden">
+        <div className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden animate-entrance opacity-0 translate-y-8 transition-all duration-1000">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
 
@@ -397,7 +397,7 @@ export default function DigitalLaw() {
                   </div>
                   
                   <div className="mt-12 text-center">
-                    <h3 className="text-2xl font-bold mb-3">Cân B���ng Công Lý</h3>
+                    <h3 className="text-2xl font-bold mb-3">Cân Bằng Công Lý</h3>
                     <p className="text-lg opacity-90">
                       Sự kết hợp hoàn hảo giữa tuân thủ pháp luật và bảo vệ quyền sáng tạo
                     </p>
@@ -415,7 +415,7 @@ export default function DigitalLaw() {
               Khái Niệm Pháp Lý Cơ Bản
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đại số
+              Những kiến thức nền tảng về luật sở hữu trí tuệ trong th��i đại số
             </p>
           </div>
 
@@ -707,7 +707,7 @@ export default function DigitalLaw() {
           <div className="relative px-6 py-12 text-center">
             <Scale className="h-14 w-14 mx-auto mb-6 animate-pulse drop-shadow-lg" />
             <h1 className="text-3xl font-bold mb-3 tracking-wide leading-tight">
-              Pháp Luật Số & Bản Quyền
+              Pháp Luật S�� & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
               Hiểu biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
@@ -745,7 +745,7 @@ export default function DigitalLaw() {
               </Card>
               <Card className="p-4 text-center">
                 <Shield className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
-                <div className="text-sm font-semibold">Sở hữu trí tu��</div>
+                <div className="text-sm font-semibold">Sở hữu trí tuệ</div>
               </Card>
               <Card className="p-4 text-center">
                 <Users className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
