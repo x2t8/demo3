@@ -128,7 +128,7 @@ export default function DigitalLaw() {
       dos: [
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
-        "Tạo nội dung gốc của riêng mình",
+        "Tạo nội dung g��c của riêng mình",
         "Trích dẫn nguồn rõ ràng khi cần",
         "Mua license khi sử dụng thư��ng mại",
         "Tôn trọng quyền moral của tác giả",
@@ -251,7 +251,7 @@ export default function DigitalLaw() {
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
         "Bảo vệ thông tin khách hàng",
-        "Tu��n thủ quy định về quảng cáo",
+        "Tu��n th�� quy định về quảng cáo",
       ],
       donts: [
         "Bán hàng giả, hàng nhái",
@@ -818,11 +818,11 @@ export default function DigitalLaw() {
       {/* Detailed Rule View Modal */}
       {selectedRule && (
         <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
           onClick={hideRuleDetails}
         >
           <div
-            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-white rounded-2xl max-w-5xl w-full max-h-[95vh] overflow-y-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {(() => {
