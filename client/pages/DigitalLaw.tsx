@@ -50,14 +50,21 @@ import DisclaimerBanner from "@/components/DisclaimerBanner";
 export default function DigitalLaw() {
   const [bookmarkedItems, setBookmarkedItems] = useState<string[]>([]);
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
-  // Simple animation for legal rules when component mounts
+  // Page entrance animation
   useEffect(() => {
+    // Set page as loaded to trigger animations
+    setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 100);
+
+    // Simple animation for legal rules when component mounts
     const cards = document.querySelectorAll('.legal-rule-card');
     cards.forEach((card, index) => {
       setTimeout(() => {
         card.classList.add('animate-in');
-      }, index * 150);
+      }, 800 + (index * 150)); // Delay after page animation
     });
   }, []);
 
@@ -159,7 +166,7 @@ export default function DigitalLaw() {
       donts: [
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
-        "Sử dụng sai mục đích đã khai báo",
+        "Sử d��ng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
@@ -430,7 +437,7 @@ export default function DigitalLaw() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Quyền pháp lý đối với các s��ng tạo trí tuệ
+                  Quyền pháp lý đối với các sáng tạo trí tuệ
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Bao gồm bản quyền, thương hiệu, bằng sáng chế
