@@ -113,7 +113,7 @@ export default function DigitalLaw() {
     },
     {
       value: "150 triệu",
-      label: "Mức phạt tối đa tổ ch���c",
+      label: "Mức ph��t tối đa tổ chức",
       color: "from-orange-500 to-orange-600",
       description: "VNĐ tại Việt Nam",
     },
@@ -175,7 +175,7 @@ export default function DigitalLaw() {
         "Thu thập dữ liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
-        "Lưu trữ dữ liệu quá th���i hạn",
+        "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
@@ -367,7 +367,7 @@ export default function DigitalLaw() {
                   <div className="relative inline-block">
                     <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-110 hover:rotate-3 transition-all duration-500 animate-gentle-wave" />
                     
-                    {/* Bên trái cân: Pháp luật số - TO HƠN */}
+                    {/* Bên trái cân: Pháp luật s��� - TO HƠN */}
                     <div className="absolute -left-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -422,7 +422,7 @@ export default function DigitalLaw() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
             <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Bản quyền (Copyright)</CardTitle>
               </CardHeader>
               <CardContent>
@@ -469,7 +469,7 @@ export default function DigitalLaw() {
                   Giáo dục, nghiên cứu, phê bình, tin tức
                 </Badge>
                 <div className="text-xs text-gray-500">
-                  VD: Review phim, Trích dẫn luận văn
+                  VD: Review phim, Trích dẫn lu���n văn
                 </div>
               </CardContent>
             </Card>
@@ -707,7 +707,7 @@ export default function DigitalLaw() {
           <div className="relative px-6 py-12 text-center">
             <Scale className="h-14 w-14 mx-auto mb-6 animate-pulse drop-shadow-lg" />
             <h1 className="text-3xl font-bold mb-3 tracking-wide leading-tight">
-              Pháp Lu���t Số & Bản Quyền
+              Pháp Luật Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
               Hiểu biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
