@@ -176,7 +176,7 @@ export default function DigitalLaw() {
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
-        "Không bảo mật dữ liệu đúng cách",
+        "Không bảo mật dữ liệu ��úng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
     },
@@ -458,7 +458,7 @@ export default function DigitalLaw() {
 
             <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
-                <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+                <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg">Fair Use/Sử dụng hợp lý</CardTitle>
               </CardHeader>
               <CardContent>
@@ -670,7 +670,7 @@ export default function DigitalLaw() {
                 Cùng Xây Dựng Không Gian Số Hợp Pháp!
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Hiểu biết pháp luật giúp bạn sáng tạo tự do và b���o vệ quyền lợi 
+                Hiểu biết pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
                 của bản thân cũng như người khác
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
