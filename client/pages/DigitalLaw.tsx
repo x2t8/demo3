@@ -746,11 +746,12 @@ export default function DigitalLaw() {
               <Card
                 key={rule.id}
                 className="cursor-pointer transition-all duration-200 border-l-4 hover:shadow-lg"
-                style={{ borderLeftColor: rule.gradient.includes('purple') ? '#8b5cf6' : 
+                style={{ borderLeftColor: rule.gradient.includes('purple') ? '#8b5cf6' :
                          rule.gradient.includes('blue') ? '#3b82f6' :
                          rule.gradient.includes('green') ? '#10b981' :
                          rule.gradient.includes('orange') ? '#f59e0b' :
                          rule.gradient.includes('indigo') ? '#6366f1' : '#ef4444' }}
+                onClick={() => showRuleDetails(rule.id)}
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
