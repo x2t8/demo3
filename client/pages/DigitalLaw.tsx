@@ -715,7 +715,7 @@ export default function DigitalLaw() {
               Pháp Luật Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
-              Hiểu biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
+              Hi���u biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
             </p>
 
             {/* Quick Stats Mobile */}
@@ -916,9 +916,10 @@ export default function DigitalLaw() {
                     </div>
 
                     {/* Action buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+                    <div className="flex gap-3 mt-6 pt-4 border-t">
                       <Button
                         onClick={() => toggleBookmark(rule.id)}
+                        size="sm"
                         className={`${rule.gradient.includes('purple') ? 'bg-purple-600 hover:bg-purple-700' :
                                       rule.gradient.includes('blue') ? 'bg-blue-600 hover:bg-blue-700' :
                                       rule.gradient.includes('green') ? 'bg-green-600 hover:bg-green-700' :
@@ -932,9 +933,8 @@ export default function DigitalLaw() {
                         )}
                         {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
                       </Button>
-                      <Button variant="outline" onClick={hideRuleDetails}>
-                        <ArrowLeft className="h-4 w-4 mr-2" />
-                        Quay lại
+                      <Button variant="outline" onClick={hideRuleDetails} size="sm" className="ml-auto">
+                        Đóng
                       </Button>
                     </div>
                   </div>
