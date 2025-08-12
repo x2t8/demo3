@@ -337,8 +337,8 @@ export default function DigitalLaw() {
                   một cách hợp pháp trong thời đ���i số.
                 </p>
                 <div className="flex items-center space-x-6">
-                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-300">
                       89%
                     </div>
                     <div className="text-sm opacity-80">
@@ -346,8 +346,8 @@ export default function DigitalLaw() {
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
-                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-300">
                       75 triệu
                     </div>
                     <div className="text-sm opacity-80">
@@ -355,8 +355,8 @@ export default function DigitalLaw() {
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
-                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-300">
                       2.1 tỷ
                     </div>
                     <div className="text-sm opacity-80">USD thiệt hại/năm</div>
@@ -569,7 +569,7 @@ export default function DigitalLaw() {
                           </div>
                           <ul className="space-y-1">
                             {rule.dos.slice(0, 2).map((item, idx) => (
-                              <li key={idx} className="text-gray-600 line-clamp-1">�� {item}</li>
+                              <li key={idx} className="text-gray-600 line-clamp-1">• {item}</li>
                             ))}
                             {rule.dos.length > 2 && (
                               <li className="text-gray-400">... và {rule.dos.length - 2} mục khác</li>
