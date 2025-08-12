@@ -205,7 +205,7 @@ export default function DigitalLaw() {
         "Đăng tin giả, tin đồn thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
-        "Quảng cáo sản phẩm trái phép",
+        "Quảng cáo sản phẩm trái ph��p",
         "Tuyên truyền chống phá nhà nước",
         "Chia sẻ nội dung khiêu dâm",
       ],
@@ -365,7 +365,7 @@ export default function DigitalLaw() {
                 {/* Bi���u tượng cân công lý lớn làm button */}
                 <div className="text-center">
                   <div className="relative inline-block">
-                    <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-105 transition-transform duration-300" />
+                    <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-110 hover:rotate-3 transition-all duration-500 animate-gentle-wave" />
                     
                     {/* Bên trái cân: Pháp luật số - TO HƠN */}
                     <div className="absolute -left-24 top-12">
@@ -506,7 +506,7 @@ export default function DigitalLaw() {
               </p>
             </div>
 
-            {/* LAYOUT MỚI: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
+            {/* LAYOUT M���I: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {legalRules.map((rule, index) => (
                 <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group">
@@ -710,7 +710,7 @@ export default function DigitalLaw() {
               Pháp Luật Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
-              Hiểu biết pháp luật ��ể sử dụng công nghệ một cách hợp pháp và an toàn
+              Hiểu biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
             </p>
 
             {/* Quick Stats Mobile */}
