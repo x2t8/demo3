@@ -87,14 +87,6 @@ export default function DigitalLaw() {
     setSelectedRule(ruleId);
     // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
-
-    // Force scroll to ensure modal appears in viewport center
-    setTimeout(() => {
-      const modal = document.querySelector('[data-modal="rule-details"]');
-      if (modal) {
-        modal.scrollIntoView({ behavior: 'instant', block: 'center' });
-      }
-    }, 50);
   };
 
   const hideRuleDetails = () => {
@@ -147,7 +139,7 @@ export default function DigitalLaw() {
       dos: [
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
-        "Tạo nội dung gốc của riêng mình",
+        "Tạo nội dung gốc của riêng m��nh",
         "Trích dẫn nguồn rõ ràng khi cần",
         "Mua license khi sử dụng thư��ng mại",
         "Tôn trọng quyền moral của tác giả",
@@ -396,7 +388,7 @@ export default function DigitalLaw() {
                       </Button>
                     </div>
 
-                    {/* Bên phải cân: Bản quyền - TO H��N */}
+                    {/* Bên phải cân: Bản quyền - TO HƠN */}
                     <div className="absolute -right-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -518,7 +510,7 @@ export default function DigitalLaw() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                📋 Quy Định Pháp Lý Chi Tiết
+                📋 Quy Định Pháp Lý Chi Ti��t
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Hướng dẫn chi tiết về các quy định pháp lý trong hoạt động số
@@ -731,7 +723,7 @@ export default function DigitalLaw() {
           <div className="relative px-6 py-12 text-center">
             <Scale className="h-14 w-14 mx-auto mb-6 animate-pulse drop-shadow-lg" />
             <h1 className="text-3xl font-bold mb-3 tracking-wide leading-tight">
-              Pháp Luật S�� & Bản Quyền
+              Pháp Luật Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
               Hi���u biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
