@@ -352,8 +352,8 @@ export default function DigitalLaw() {
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-300">
+                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
                       2.1 tỷ
                     </div>
                     <div className="text-sm opacity-80">USD thiệt hại/năm</div>
@@ -710,7 +710,7 @@ export default function DigitalLaw() {
               Pháp Luật Số & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
-              Hiểu biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
+              Hiểu biết pháp luật ��ể sử dụng công nghệ một cách hợp pháp và an toàn
             </p>
 
             {/* Quick Stats Mobile */}
