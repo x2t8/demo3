@@ -85,21 +85,10 @@ export default function DigitalLaw() {
 
   const showRuleDetails = (ruleId: string) => {
     setSelectedRule(ruleId);
-    setIsModalVisible(true);
-    // Add delay for modal animation
-    setTimeout(() => {
-      const modal = document.querySelector('.modal-content');
-      modal?.classList.add('animate-modal-in');
-    }, 50);
   };
 
   const hideRuleDetails = () => {
-    const modal = document.querySelector('.modal-content');
-    modal?.classList.add('animate-modal-out');
-    setTimeout(() => {
-      setSelectedRule(null);
-      setIsModalVisible(false);
-    }, 300);
+    setSelectedRule(null);
   };
 
   const digitalLawStats = [
@@ -142,7 +131,7 @@ export default function DigitalLaw() {
       impact: "Bảo vệ sáng tạo",
       usage: "Mọi tác phẩm số",
       description:
-        "Bản quyền bảo vệ quyền của tác giả ��ối với tác phẩm sáng tạo, bao gồm văn bản, hình ảnh, âm nhạc và video.",
+        "Bản quyền bảo vệ quyền của tác giả đối với tác phẩm sáng tạo, bao gồm văn bản, hình ảnh, âm nhạc và video.",
       dos: [
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
@@ -206,7 +195,7 @@ export default function DigitalLaw() {
       dos: [
         "Kiểm tra tính chính xác thông tin",
         "Tôn trọng các giá trị xã hội",
-        "Tuân thủ quy định nền tảng",
+        "Tuân thủ quy ��ịnh nền tảng",
         "Khai báo hợp tác thương mại",
         "Bảo vệ danh tiếng người khác",
         "Sử dụng ngôn ngữ văn minh",
@@ -269,7 +258,7 @@ export default function DigitalLaw() {
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
         "Bảo vệ thông tin khách hàng",
-        "Tuân thủ quy định về quảng cáo",
+        "Tu��n thủ quy định về quảng cáo",
       ],
       donts: [
         "Bán hàng giả, hàng nhái",
@@ -377,7 +366,7 @@ export default function DigitalLaw() {
                   <div className="relative inline-block">
                     <Scale className="h-48 w-48 mx-auto text-yellow-300 drop-shadow-2xl cursor-pointer hover:scale-105 transition-transform duration-300" />
                     
-                    {/* Bên trái cân: Pháp lu���t số - TO HƠN */}
+                    {/* Bên trái cân: Pháp luật số - TO HƠN */}
                     <div className="absolute -left-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -516,7 +505,7 @@ export default function DigitalLaw() {
               </p>
             </div>
 
-            {/* LAYOUT M���I: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
+            {/* LAYOUT MỚI: Grid Cards thay vì Zigzag - ĐỘC ĐÁO */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
               {legalRules.map((rule, index) => (
                 <Card key={rule.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 group legal-rule-card opacity-0 translate-y-8">
@@ -690,7 +679,7 @@ export default function DigitalLaw() {
                   className="bg-white text-indigo-600 hover:bg-gray-100"
                 >
                   <Scale className="h-5 w-5 mr-2" />
-                  Tìm hiểu thêm lu��t Việt Nam
+                  Tìm hiểu thêm luật Việt Nam
                 </Button>
                 <Button
                   size="lg"
