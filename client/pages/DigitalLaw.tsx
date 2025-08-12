@@ -177,7 +177,7 @@ export default function DigitalLaw() {
       donts: [
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
-        "Sử dụng sai mục đích đã khai báo",
+        "Sử dụng sai mục đích đã khai b��o",
         "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
@@ -330,7 +330,7 @@ export default function DigitalLaw() {
                 </div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                   Pháp Luật Số &{" "}
-                  <span className="text-yellow-300">Bản Quy��n</span>
+                  <span className="text-yellow-300">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
@@ -384,7 +384,7 @@ export default function DigitalLaw() {
                       </Button>
                     </div>
 
-                    {/* Bên phải cân: Bản quyền - TO HƠN */}
+                    {/* Bên phải cân: B��n quyền - TO HƠN */}
                     <div className="absolute -right-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -443,7 +443,7 @@ export default function DigitalLaw() {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                <Shield className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Sở hữu trí tuệ</CardTitle>
               </CardHeader>
               <CardContent>
@@ -487,7 +487,7 @@ export default function DigitalLaw() {
                   Hệ thống license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
-                  Các m��c ��ộ từ attribution đến no derivatives
+                  Các mức ��ộ từ attribution đến no derivatives
                 </Badge>
                 <div className="text-xs text-gray-500">
                   VD: Wikipedia, Unsplash
