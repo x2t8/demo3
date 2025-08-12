@@ -70,7 +70,6 @@ export default function DigitalLaw() {
   };
 
   const showRuleDetails = (ruleId: string) => {
-    console.log('Showing rule details for:', ruleId);
     setSelectedRule(ruleId);
   };
 
