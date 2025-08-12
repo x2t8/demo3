@@ -396,7 +396,7 @@ export default function DigitalLaw() {
                       </Button>
                     </div>
 
-                    {/* Bên phải cân: Bản quyền - TO HƠN */}
+                    {/* Bên phải cân: Bản quyền - TO H��N */}
                     <div className="absolute -right-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -731,7 +731,7 @@ export default function DigitalLaw() {
           <div className="relative px-6 py-12 text-center">
             <Scale className="h-14 w-14 mx-auto mb-6 animate-pulse drop-shadow-lg" />
             <h1 className="text-3xl font-bold mb-3 tracking-wide leading-tight">
-              Pháp Luật Số & Bản Quyền
+              Pháp Luật S�� & Bản Quyền
             </h1>
             <p className="text-base opacity-95 mb-8 leading-relaxed px-4">
               Hi���u biết pháp luật để sử dụng công nghệ một cách hợp pháp và an toàn
@@ -837,18 +837,16 @@ export default function DigitalLaw() {
       {/* Detailed Rule View Modal */}
       {selectedRule && (
         <div
-          className="fixed inset-0 bg-black/60 z-50 p-4"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
           onClick={hideRuleDetails}
           data-modal="rule-details"
           style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
+            position: 'fixed !important',
+            top: '0 !important',
+            left: '0 !important',
+            right: '0 !important',
+            bottom: '0 !important',
+            zIndex: 9999
           }}
         >
           <div
