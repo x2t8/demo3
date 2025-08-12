@@ -1,7 +1,39 @@
-/* Meaningful animations for digital safety education */
+/* Enhanced animations for DigitalLaw page */
 
-/* Heart-warming entrance animations */
-@keyframes gentleSlideUp {
+/* Modal animations */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modalOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Entrance animations */
+@keyframes slideUpFadeIn {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -12,188 +44,151 @@
   }
 }
 
-@keyframes gentleFadeIn {
-  from {
+@keyframes bounceIn {
+  0% {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.3);
   }
-  to {
+  50% {
     opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Protective shield animation */
-@keyframes protectivePulse {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
-  }
-  50% {
     transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
-  }
-}
-
-/* Warning attention grabber */
-@keyframes warningGlow {
-  0%,
-  100% {
-    box-shadow: 0 0 5px rgba(239, 68, 68, 0.3);
-  }
-  50% {
-    box-shadow:
-      0 0 20px rgba(239, 68, 68, 0.6),
-      0 0 30px rgba(239, 68, 68, 0.4);
-  }
-}
-
-/* Caring hover effect */
-@keyframes caringLift {
-  from {
-    transform: translateY(0) scale(1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow:
-      0 20px 25px -5px rgba(0, 0, 0, 0.1),
-      0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-}
-
-/* Progress indicator */
-@keyframes progressFill {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* Heartbeat for important info */
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  14% {
-    transform: scale(1.1);
-  }
-  28% {
-    transform: scale(1);
-  }
-  42% {
-    transform: scale(1.1);
   }
   70% {
-    transform: scale(1);
+    transform: scale(0.9);
   }
-}
-
-/* Gentle wave for attention */
-@keyframes gentleWave {
-  0%,
   100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  75% {
-    transform: rotate(-5deg);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-/* Smooth scale on interaction */
-@keyframes gentleScale {
+@keyframes rotateIn {
   from {
-    transform: scale(1);
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.8);
   }
   to {
-    transform: scale(1.05);
-  }
-}
-
-/* Typography breathing */
-@keyframes textBreathe {
-  0%,
-  100% {
-    transform: translateY(0px);
     opacity: 1;
-  }
-  50% {
-    transform: translateY(-2px);
-    opacity: 0.8;
+    transform: rotate(0deg) scale(1);
   }
 }
 
-/* Utility classes */
-.animate-slide-up {
-  animation: gentleSlideUp 0.6s ease-out forwards;
+/* Custom utility classes */
+.animate-modal-in {
+  animation: modalIn 0.3s ease-out forwards;
+}
+
+.animate-modal-out {
+  animation: modalOut 0.3s ease-in forwards;
 }
 
 .animate-fade-in {
-  animation: gentleFadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.3s ease-out;
 }
 
-.animate-protective-pulse {
-  animation: protectivePulse 2s infinite;
+.animate-slide-up {
+  animation: slideUpFadeIn 0.6s ease-out;
 }
 
-.animate-warning-glow {
-  animation: warningGlow 2s ease-in-out infinite;
+.animate-bounce-in {
+  animation: bounceIn 0.8s ease-out;
 }
 
-.animate-heartbeat {
-  animation: heartbeat 2s ease-in-out infinite;
+.animate-rotate-in {
+  animation: rotateIn 0.6s ease-out;
 }
 
-.animate-gentle-wave {
-  animation: gentleWave 3s ease-in-out infinite;
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.animate-text-breathe {
-  animation: textBreathe 4s ease-in-out infinite;
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Hover states */
-.hover-caring-lift {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.hover-glow {
+  transition: all 0.3s ease;
 }
 
-.hover-caring-lift:hover {
-  animation: caringLift 0.3s ease-out forwards;
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
+  transform: scale(1.02);
 }
 
-/* Staggered entrance for lists */
-.stagger-children > * {
+/* Staggered entrance animations */
+.stagger-item {
   opacity: 0;
-  animation: gentleSlideUp 0.6s ease-out forwards;
+  transform: translateY(20px);
+  animation: slideUpFadeIn 0.6s ease-out forwards;
 }
 
-.stagger-children > *:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.stagger-children > *:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.stagger-children > *:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.stagger-children > *:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.stagger-children > *:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.stagger-children > *:nth-child(6) {
-  animation-delay: 0.6s;
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Enhanced breathing animation */
+@keyframes deepBreathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+  75% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
 }
 
-/* Loading states */
+.animate-deep-breathe {
+  animation: deepBreathe 4s ease-in-out infinite;
+}
+
+/* Icon animations */
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+.animate-icon-float {
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+/* Gradient background animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Loading shimmer effect */
 @keyframes shimmer {
   0% {
     background-position: -200px 0;
@@ -203,30 +198,54 @@
   }
 }
 
-.loading-shimmer {
-  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200px 100%;
   animation: shimmer 1.5s infinite;
 }
 
-/* Intersection Observer classes */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+/* Scale pulse animation */
+@keyframes scalePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
-.scroll-reveal.revealed {
+.animate-scale-pulse {
+  animation: scalePulse 2s ease-in-out infinite;
+}
+
+/* Smooth entrance for elements */
+.animate-entrance {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-entrance.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Emergency contact special animation */
-.emergency-pulse {
-  animation: protectivePulse 1.5s infinite;
-  background: linear-gradient(45deg, #ef4444, #dc2626);
+/* Card stack effect */
+@keyframes cardStack {
+  0% {
+    transform: translateY(0) scale(1);
+    z-index: 1;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+    z-index: 10;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    z-index: 1;
+  }
 }
 
-.emergency-pulse:hover {
-  animation-duration: 1s;
+.animate-card-stack:hover {
+  animation: cardStack 0.6s ease-in-out;
 }
