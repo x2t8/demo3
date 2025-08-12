@@ -175,7 +175,7 @@ export default function DigitalLaw() {
     {
       id: "content",
       icon: FileText,
-      title: "Nội dung hợp pháp",
+      title: "N���i dung hợp pháp",
       importance: "Quan trọng cao",
       importanceLevel: 94,
       color: "text-green-600 bg-green-100",
@@ -205,7 +205,7 @@ export default function DigitalLaw() {
     {
       id: "social-media",
       icon: Smartphone,
-      title: "Quy đ���nh mạng xã hội",
+      title: "Quy định mạng xã hội",
       importance: "Quan trọng cao",
       importanceLevel: 91,
       color: "text-orange-600 bg-orange-100",
@@ -405,7 +405,9 @@ export default function DigitalLaw() {
         </div>
 
         {/* Legal Concepts Overview */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 transition-all duration-1000 delay-500 ${
+          isPageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Khái Niệm Pháp Lý Cơ Bản
