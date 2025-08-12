@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useScrollReveal, useStaggeredReveal } from "@/hooks/useScrollReveal";
 import {
   Scale,
@@ -178,7 +177,7 @@ export default function DigitalLaw() {
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
-        "Lưu trữ dữ liệu quá thời hạn",
+        "Lưu trữ dữ liệu quá thời h��n",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
@@ -636,7 +635,7 @@ export default function DigitalLaw() {
               📊 Thống Kê Pháp Lý Toàn Cầu
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những con số cho thấy tầm quan trọng của tuân thủ pháp luật số
+              Những con số cho thấy tầm quan trọng c��a tuân thủ pháp luật số
             </p>
           </div>
 
@@ -721,7 +720,7 @@ export default function DigitalLaw() {
               <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-4">
                 <div className="text-2xl font-bold mb-1">89%</div>
                 <div className="text-sm opacity-90 leading-tight">
-                  Vi ph���m không cố ý
+                  Vi phạm không cố ý
                 </div>
               </div>
               <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-4">
