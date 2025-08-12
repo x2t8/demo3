@@ -166,7 +166,7 @@ export default function DigitalLaw() {
       donts: [
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
-        "Sử d��ng sai mục đích đã khai báo",
+        "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
@@ -295,7 +295,9 @@ export default function DigitalLaw() {
   ];
 
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-gradient-to-br from-indigo-100 via-blue-50 to-purple-100">
+    <div className={`min-h-screen transition-all duration-1000 bg-gradient-to-br from-indigo-100 via-blue-50 to-purple-100 ${
+      isPageLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+    }`}>
       <Header />
       <DisclaimerBanner />
 
@@ -322,7 +324,7 @@ export default function DigitalLaw() {
                   <span className="text-yellow-300">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
-                  Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
+                  Hi��u biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
                   một cách hợp pháp trong thời đ���i số.
                 </p>
                 <div className="flex items-center space-x-6">
