@@ -186,7 +186,7 @@ export default function DigitalLaw() {
       description:
         "Nội dung đăng tải phải tuân thủ luật pháp Việt Nam, không vi phạm đạo đức xã hội và quy định nền tảng.",
       dos: [
-        "Kiểm tra tính chính xác thông tin",
+        "Ki���m tra tính chính xác thông tin",
         "Tôn trọng các giá trị xã hội",
         "Tuân thủ quy ��ịnh nền tảng",
         "Khai báo hợp tác thương mại",
@@ -413,7 +413,7 @@ export default function DigitalLaw() {
               Khái Niệm Pháp Lý Cơ Bản
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đại số
+              Những kiến thức nền tảng về luật sở hữu trí tuệ trong thời đ���i số
             </p>
           </div>
 
@@ -883,32 +883,32 @@ export default function DigitalLaw() {
                     </div>
 
                     {/* Do's and Don'ts */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div>
-                        <div className="flex items-center space-x-2 mb-4">
-                          <CheckCircle className="h-6 w-6 text-green-500" />
-                          <h3 className="text-xl font-bold text-green-700">Nên làm</h3>
+                        <div className="flex items-center space-x-2 mb-3">
+                          <CheckCircle className="h-5 w-5 text-green-600" />
+                          <h3 className="text-lg font-bold text-green-700">✅ Nên làm</h3>
                         </div>
-                        <div className="space-y-3">
+                        <div className="space-y-2">
                           {rule.dos.map((item, idx) => (
-                            <div key={idx} className="flex items-start space-x-3 p-3 bg-green-50 rounded-lg">
-                              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                              <p className="text-gray-700">{item}</p>
+                            <div key={idx} className="flex items-start space-x-2 p-3 bg-green-50 rounded-lg border-l-4 border-green-200">
+                              <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
                             </div>
                           ))}
                         </div>
                       </div>
 
                       <div>
-                        <div className="flex items-center space-x-2 mb-4">
-                          <XCircle className="h-6 w-6 text-red-500" />
-                          <h3 className="text-xl font-bold text-red-700">Không nên làm</h3>
+                        <div className="flex items-center space-x-2 mb-3">
+                          <XCircle className="h-5 w-5 text-red-600" />
+                          <h3 className="text-lg font-bold text-red-700">❌ Không nên làm</h3>
                         </div>
-                        <div className="space-y-3">
+                        <div className="space-y-2">
                           {rule.donts.map((item, idx) => (
-                            <div key={idx} className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
-                              <XCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                              <p className="text-gray-700">{item}</p>
+                            <div key={idx} className="flex items-start space-x-2 p-3 bg-red-50 rounded-lg border-l-4 border-red-200">
+                              <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
                             </div>
                           ))}
                         </div>
