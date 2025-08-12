@@ -175,7 +175,7 @@ export default function DigitalLaw() {
         "Tuân thủ quyền được quên",
       ],
       donts: [
-        "Thu thập d��� liệu không cần thiết",
+        "Thu th��p d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
@@ -322,8 +322,8 @@ export default function DigitalLaw() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="flex items-center mb-6 animate-entrance opacity-0 translate-y-4 transition-all duration-700 delay-300">
-                  <Scale className="h-12 w-12 mr-4 animate-pulse hover:animate-spin transition-transform" />
+                <div className="flex items-center mb-6">
+                  <Scale className="h-12 w-12 mr-4 animate-pulse" />
                   <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     CÔNG LÝ VÀ PHÁP QUYỀN
                   </span>
@@ -673,7 +673,7 @@ export default function DigitalLaw() {
                 Cùng Xây Dựng Không Gian Số Hợp Pháp!
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Hiểu biết pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
+                Hiểu bi��t pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
                 của bản thân cũng như người khác
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
