@@ -128,7 +128,7 @@ export default function DigitalLaw() {
       dos: [
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
-        "Tạo nội dung g��c của riêng mình",
+        "Tạo nội dung gốc của riêng mình",
         "Trích dẫn nguồn rõ ràng khi cần",
         "Mua license khi sử dụng thư��ng mại",
         "Tôn trọng quyền moral của tác giả",
@@ -251,7 +251,7 @@ export default function DigitalLaw() {
         "Cung cấp thông tin sản phẩm chính xác",
         "Có chính sách đổi trả rõ ràng",
         "Bảo vệ thông tin khách hàng",
-        "Tu��n th�� quy định về quảng cáo",
+        "Tu��n thủ quy định về quảng cáo",
       ],
       donts: [
         "Bán hàng giả, hàng nhái",
@@ -832,16 +832,16 @@ export default function DigitalLaw() {
               return (
                 <div>
                   {/* Header */}
-                  <div className={`bg-gradient-to-r ${rule.gradient} text-white p-8 rounded-t-2xl relative overflow-hidden`}>
+                  <div className={`bg-gradient-to-r ${rule.gradient} text-white p-6 rounded-t-2xl relative overflow-hidden`}>
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
-                    <div className="relative flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                          <rule.icon className="h-8 w-8 text-white" />
+                    <div className="relative flex items-start justify-between">
+                      <div className="flex items-center space-x-4 flex-1">
+                        <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                          <rule.icon className="h-7 w-7 text-white" />
                         </div>
-                        <div>
-                          <h2 className="text-3xl font-bold mb-2">{rule.title}</h2>
-                          <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                        <div className="flex-1">
+                          <h2 className="text-2xl md:text-3xl font-bold mb-2">{rule.title}</h2>
+                          <Badge variant="secondary" className="bg-white/20 text-white border-white/30 text-sm">
                             {rule.importance}
                           </Badge>
                         </div>
@@ -850,9 +850,9 @@ export default function DigitalLaw() {
                         variant="ghost"
                         size="sm"
                         onClick={hideRuleDetails}
-                        className="text-white hover:bg-white/20"
+                        className="text-white hover:bg-white/20 ml-4"
                       >
-                        <XCircle className="h-6 w-6" />
+                        <XCircle className="h-5 w-5" />
                       </Button>
                     </div>
                   </div>
