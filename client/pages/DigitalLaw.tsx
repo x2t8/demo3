@@ -104,7 +104,7 @@ export default function DigitalLaw() {
     },
     {
       value: "2.1 tỷ",
-      label: "Thiệt hại bản quyền toàn cầu",
+      label: "Thiệt hại bản quyền to��n cầu",
       color: "from-blue-500 to-blue-600",
       description: "USD/năm 2023",
     },
@@ -206,7 +206,7 @@ export default function DigitalLaw() {
       ],
       donts: [
         "Đăng tin giả, tin đồn thất thiệt",
-        "Xúc phạm danh d��, nhân phẩm",
+        "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
         "Tuyên truyền chống phá nhà nước",
@@ -231,7 +231,7 @@ export default function DigitalLaw() {
         "Báo cáo nội dung vi phạm",
         "Bảo vệ tài khoản bằng 2FA",
         "Khai báo quảng cáo có trả tiền",
-        "Tôn trọng quyền riêng tư người khác",
+        "Tôn trọng quyền riêng tư ng��ời khác",
         "Sử dụng real name trên nền tảng yêu cầu",
       ],
       donts: [
@@ -462,11 +462,11 @@ export default function DigitalLaw() {
             <Card className="text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover-caring-lift group">
               <CardHeader>
                 <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                <CardTitle className="text-lg">Fair Use/Sử dụng hợp lý</CardTitle>
+                <CardTitle className="text-lg">Fair Use/Sử dụng h��p lý</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
-                  Sử dụng tác phẩm có bản quyền mà không cần xin ph����p
+                  Sử dụng tác phẩm có bản quyền mà không cần xin ph��p
                 </p>
                 <Badge variant="outline" className="mb-3">
                   Giáo dục, nghiên cứu, phê bình, tin tức
@@ -598,7 +598,7 @@ export default function DigitalLaw() {
                       <Button
                         size="sm"
                         variant="outline"
-                        className="w-full hover:scale-105 transition-all duration-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50"
+                        className="w-full"
                         onClick={() => showRuleDetails(rule.id)}
                       >
                         <Eye className="h-4 w-4 mr-2" />
