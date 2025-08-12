@@ -124,7 +124,7 @@ export default function DigitalLaw() {
       impact: "Bảo vệ sáng tạo",
       usage: "Mọi tác phẩm số",
       description:
-        "Bản quyền bảo vệ quyền của tác giả đối với tác phẩm sáng tạo, bao gồm văn bản, hình ảnh, âm nhạc và video.",
+        "Bản quyền bảo vệ quyền c���a tác giả đối với tác phẩm sáng tạo, bao gồm văn bản, hình ảnh, âm nhạc và video.",
       dos: [
         "Xin phép tác giả trước khi sử dụng",
         "Sử dụng tài nguyên Creative Commons",
@@ -673,7 +673,7 @@ export default function DigitalLaw() {
                 Hiểu biết pháp luật giúp bạn sáng tạo tự do và bảo vệ quyền lợi 
                 của bản thân cũng như người khác
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button
                   size="lg"
                   variant="secondary"
@@ -681,14 +681,6 @@ export default function DigitalLaw() {
                 >
                   <Scale className="h-5 w-5 mr-2" />
                   Tìm hiểu thêm luật Việt Nam
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10"
-                >
-                  <FileText className="h-5 w-5 mr-2" />
-                  Tải template bản quyền
                 </Button>
               </div>
             </CardContent>
