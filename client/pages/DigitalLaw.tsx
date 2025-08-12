@@ -247,7 +247,7 @@ export default function DigitalLaw() {
     {
       id: "cybersecurity",
       icon: Lock,
-      title: "An toàn thông tin m��ng",
+      title: "An toàn thông tin mạng",
       importance: "Đang nổi lên",
       importanceLevel: 85,
       color: "text-red-600 bg-red-100",
@@ -468,7 +468,7 @@ export default function DigitalLaw() {
           </div>
         </div>
 
-        {/* Legal Rules - THIẾT KẾ MỚI (khác v��i 2 trang kia) */}
+        {/* Legal Rules - THIẾT KẾ MỚI (khác với 2 trang kia) */}
         <div className="bg-gradient-to-br from-indigo-50 to-purple-50 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -782,6 +782,128 @@ export default function DigitalLaw() {
           </div>
         </div>
       </div>
+
+      {/* Detailed Rule View Modal */}
+      {selectedRule && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            {(() => {
+              const rule = legalRules.find(r => r.id === selectedRule);
+              if (!rule) return null;
+
+              return (
+                <div>
+                  {/* Header */}
+                  <div className={`bg-gradient-to-r ${rule.gradient} text-white p-8 rounded-t-2xl relative overflow-hidden`}>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
+                    <div className="relative flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                          <rule.icon className="h-8 w-8 text-white" />
+                        </div>
+                        <div>
+                          <h2 className="text-3xl font-bold mb-2">{rule.title}</h2>
+                          <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                            {rule.importance}
+                          </Badge>
+                        </div>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={hideRuleDetails}
+                        className="text-white hover:bg-white/20"
+                      >
+                        <XCircle className="h-6 w-6" />
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-8">
+                    <p className="text-lg text-gray-700 mb-8 leading-relaxed">{rule.description}</p>
+
+                    {/* Stats */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                      <div className="bg-gray-50 rounded-lg p-4 text-center">
+                        <TrendingUp className="h-6 w-6 text-gray-400 mx-auto mb-2" />
+                        <div className="text-sm text-gray-500">Tác động</div>
+                        <div className="font-semibold">{rule.impact}</div>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-4 text-center">
+                        <Globe className="h-6 w-6 text-gray-400 mx-auto mb-2" />
+                        <div className="text-sm text-gray-500">Phạm vi áp dụng</div>
+                        <div className="font-semibold">{rule.usage}</div>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-4 text-center">
+                        <Target className="h-6 w-6 text-gray-400 mx-auto mb-2" />
+                        <div className="text-sm text-gray-500">Mức độ quan trọng</div>
+                        <div className="font-semibold">{rule.importanceLevel}%</div>
+                      </div>
+                    </div>
+
+                    {/* Do's and Don'ts */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <div className="flex items-center space-x-2 mb-4">
+                          <CheckCircle className="h-6 w-6 text-green-500" />
+                          <h3 className="text-xl font-bold text-green-700">Nên làm</h3>
+                        </div>
+                        <div className="space-y-3">
+                          {rule.dos.map((item, idx) => (
+                            <div key={idx} className="flex items-start space-x-3 p-3 bg-green-50 rounded-lg">
+                              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                              <p className="text-gray-700">{item}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <div className="flex items-center space-x-2 mb-4">
+                          <XCircle className="h-6 w-6 text-red-500" />
+                          <h3 className="text-xl font-bold text-red-700">Không nên làm</h3>
+                        </div>
+                        <div className="space-y-3">
+                          {rule.donts.map((item, idx) => (
+                            <div key={idx} className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
+                              <XCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                              <p className="text-gray-700">{item}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Action buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+                      <Button
+                        onClick={() => toggleBookmark(rule.id)}
+                        className={`${rule.gradient.includes('purple') ? 'bg-purple-600 hover:bg-purple-700' :
+                                      rule.gradient.includes('blue') ? 'bg-blue-600 hover:bg-blue-700' :
+                                      rule.gradient.includes('green') ? 'bg-green-600 hover:bg-green-700' :
+                                      rule.gradient.includes('orange') ? 'bg-orange-600 hover:bg-orange-700' :
+                                      rule.gradient.includes('indigo') ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-red-600 hover:bg-red-700'}`}
+                      >
+                        {bookmarkedItems.includes(rule.id) ? (
+                          <Heart className="h-4 w-4 mr-2 fill-current" />
+                        ) : (
+                          <Bookmark className="h-4 w-4 mr-2" />
+                        )}
+                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
+                      </Button>
+                      <Button variant="outline" onClick={hideRuleDetails}>
+                        <ArrowLeft className="h-4 w-4 mr-2" />
+                        Quay lại
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
