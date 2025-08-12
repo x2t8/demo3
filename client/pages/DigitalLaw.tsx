@@ -116,7 +116,7 @@ export default function DigitalLaw() {
     },
     {
       value: "150 triệu",
-      label: "Mức phạt t���i đa tổ chức",
+      label: "Mức phạt tối đa tổ chức",
       color: "from-orange-500 to-orange-600",
       description: "VNĐ tại Việt Nam",
     },
@@ -178,7 +178,7 @@ export default function DigitalLaw() {
         "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
-        "Lưu tr�� dữ liệu quá thời hạn",
+        "Lưu trữ dữ liệu quá thời hạn",
         "Không bảo mật dữ liệu đúng cách",
         "Từ chối quyền truy cập dữ liệu",
       ],
@@ -208,7 +208,7 @@ export default function DigitalLaw() {
         "Đăng tin giả, tin đồn thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
-        "Quảng cáo sản phẩm trái phép",
+        "Quảng cáo sản ph���m trái phép",
         "Tuyên truyền chống phá nhà nước",
         "Chia sẻ nội dung khiêu dâm",
       ],
@@ -412,7 +412,7 @@ export default function DigitalLaw() {
         </div>
 
         {/* Legal Concepts Overview */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-reveal">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Khái Niệm Pháp Lý Cơ Bản
@@ -487,7 +487,7 @@ export default function DigitalLaw() {
                   Hệ thống license cho phép chia sẻ có điều kiện
                 </p>
                 <Badge variant="outline" className="mb-3">
-                  Các mức ��ộ từ attribution đến no derivatives
+                  Các mức ��ộ t��� attribution đến no derivatives
                 </Badge>
                 <div className="text-xs text-gray-500">
                   VD: Wikipedia, Unsplash
