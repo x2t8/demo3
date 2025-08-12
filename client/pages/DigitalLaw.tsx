@@ -384,7 +384,7 @@ export default function DigitalLaw() {
                       </Button>
                     </div>
 
-                    {/* Bên phải cân: B��n quyền - TO HƠN */}
+                    {/* Bên phải cân: Bản quyền - TO HƠN */}
                     <div className="absolute -right-24 top-12">
                       <Button 
                         className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/30 transition-all duration-300 h-auto flex-col"
@@ -461,7 +461,7 @@ export default function DigitalLaw() {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                <Users className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
                 <CardTitle className="text-lg">Fair Use/Sử dụng hợp lý</CardTitle>
               </CardHeader>
               <CardContent>
