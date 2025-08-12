@@ -164,7 +164,7 @@ export default function DigitalLaw() {
         "Tuân thủ quyền được quên",
       ],
       donts: [
-        "Thu thập d��� liệu không cần thi��t",
+        "Thu thập d��� liệu không cần thiết",
         "Chia sẻ thông tin cho bên thứ ba",
         "Sử dụng sai mục đích đã khai báo",
         "Lưu trữ dữ liệu quá thời hạn",
@@ -257,7 +257,7 @@ export default function DigitalLaw() {
         "Bán hàng giả, hàng nhái",
         "Quảng cáo gian dối, thổi phồng",
         "Trốn thuế, không khai báo doanh thu",
-        "Lừa đảo, chiếm đoạt tài s��n",
+        "Lừa đảo, chiếm đoạt tài sản",
         "Bán hàng cấm, hạn chế",
         "Vi phạm quyền lợi người tiêu dùng",
       ],
@@ -616,7 +616,7 @@ export default function DigitalLaw() {
                         ) : (
                           <Bookmark className="h-4 w-4 mr-2" />
                         )}
-                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'L��u để học sau'}
+                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
                       </Button>
                     </div>
                   </CardContent>
@@ -831,7 +831,7 @@ export default function DigitalLaw() {
               if (!rule) return null;
 
               return (
-                <div>
+                <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 4rem)' }}>
                   {/* Header */}
                   <div className={`bg-gradient-to-r ${rule.gradient} text-white p-6 rounded-t-2xl relative overflow-hidden`}>
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full transform translate-x-16 -translate-y-16"></div>
