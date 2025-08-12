@@ -139,7 +139,7 @@ export default function DigitalLaw() {
         "Tạo nội dung gốc của riêng mình",
         "Trích dẫn nguồn rõ ràng khi cần",
         "Mua license khi sử dụng thương mại",
-        "Tôn trọng quyền moral của tác giả",
+        "Tôn tr��ng quyền moral của tác giả",
       ],
       donts: [
         "Copy/paste nội dung không phép",
@@ -169,7 +169,7 @@ export default function DigitalLaw() {
         "Bảo mật dữ liệu thu thập được",
         "Cho phép người dùng chỉnh sửa/xóa",
         "Thông báo khi có rò rỉ dữ liệu",
-        "Tuân thủ quyền được quên",
+        "Tuân thủ quy���n được quên",
       ],
       donts: [
         "Thu thập dữ liệu không cần thiết",
@@ -325,9 +325,9 @@ export default function DigitalLaw() {
                     CÔNG LÝ VÀ PHÁP QUYỀN
                   </span>
                 </div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-entrance opacity-0 translate-y-6 transition-all duration-800 delay-500">
                   Pháp Luật Số &{" "}
-                  <span className="text-yellow-300">Bản Quyền</span>
+                  <span className="text-yellow-300 animate-text-breathe">Bản Quyền</span>
                 </h1>
                 <p className="text-xl opacity-90 mb-8 leading-relaxed">
                   Hiểu biết về luật pháp, bảo vệ bản quyền và sử dụng công nghệ 
@@ -423,7 +423,7 @@ export default function DigitalLaw() {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Copyright className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
-                <CardTitle className="text-lg">Bản quyền (Copyright)</CardTitle>
+                <CardTitle className="text-lg">Bản quy���n (Copyright)</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-3">
@@ -917,7 +917,7 @@ export default function DigitalLaw() {
                         ) : (
                           <Bookmark className="h-4 w-4 mr-2" />
                         )}
-                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu ��ể học sau'}
+                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
                       </Button>
                       <Button variant="outline" onClick={hideRuleDetails}>
                         <ArrowLeft className="h-4 w-4 mr-2" />
