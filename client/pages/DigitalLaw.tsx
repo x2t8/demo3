@@ -595,7 +595,7 @@ export default function DigitalLaw() {
                       <Button
                         size="sm"
                         variant="outline"
-                        className="w-full"
+                        className="w-full hover:scale-105 transition-all duration-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50"
                         onClick={() => showRuleDetails(rule.id)}
                       >
                         <Eye className="h-4 w-4 mr-2" />
