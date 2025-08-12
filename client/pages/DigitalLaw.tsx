@@ -343,8 +343,8 @@ export default function DigitalLaw() {
                     </div>
                   </div>
                   <div className="w-px h-12 bg-white/30"></div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-yellow-300">
+                  <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <div className="text-3xl font-bold text-yellow-300 animate-heartbeat">
                       75 triệu
                     </div>
                     <div className="text-sm opacity-80">
