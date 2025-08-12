@@ -205,7 +205,7 @@ export default function DigitalLaw() {
         "Sử dụng ngôn ngữ văn minh",
       ],
       donts: [
-        "Đăng tin giả, tin đồn thất thiệt",
+        "Đăng tin giả, tin đ���n thất thiệt",
         "Xúc phạm danh dự, nhân phẩm",
         "Kích động bạo lực, thù hận",
         "Quảng cáo sản phẩm trái phép",
@@ -268,7 +268,7 @@ export default function DigitalLaw() {
         "Bán hàng giả, hàng nhái",
         "Quảng cáo gian dối, thổi phồng",
         "Trốn thuế, không khai báo doanh thu",
-        "Lừa đảo, chiếm đoạt tài sản",
+        "L��a đảo, chiếm đoạt tài sản",
         "Bán hàng cấm, hạn chế",
         "Vi phạm quyền lợi người tiêu dùng",
       ],
@@ -774,7 +774,7 @@ export default function DigitalLaw() {
             {legalRules.map((rule, index) => (
               <Card
                 key={rule.id}
-                className="cursor-pointer transition-all duration-300 border-l-4 hover:shadow-xl hover:-translate-y-1 hover:scale-105 active:scale-95"
+                className="cursor-pointer transition-all duration-200 border-l-4 hover:shadow-lg"
                 style={{ borderLeftColor: rule.gradient.includes('purple') ? '#8b5cf6' :
                          rule.gradient.includes('blue') ? '#3b82f6' :
                          rule.gradient.includes('green') ? '#10b981' :
@@ -920,7 +920,7 @@ export default function DigitalLaw() {
                         ) : (
                           <Bookmark className="h-4 w-4 mr-2" />
                         )}
-                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu đ��� học sau'}
+                        {bookmarkedItems.includes(rule.id) ? 'Đã lưu' : 'Lưu để học sau'}
                       </Button>
                       <Button variant="outline" onClick={hideRuleDetails}>
                         <ArrowLeft className="h-4 w-4 mr-2" />
